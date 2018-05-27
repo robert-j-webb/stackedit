@@ -152,13 +152,15 @@ This is very quickly becoming a huge pain for me to write. I have to write compl
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
->"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your imp
+>"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation."
+
+### 
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe - every time a developer lets unescaped html go into the Dom, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we just have to do that - for example showing images that the user has uploaded, or embedding HTML that’s been sufficiently sanitized by the server. Every time you read a comment on GitHub, or look at an image on twitter, that comes from unescaped data and injecting it directly into the dom.
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Nzk2NTE1MywyNDQ4NjU3MTAsLTc5Nj
-AwMTczMSwtMzU4NDA2NjU5LDE5MzQ3NzQ1NjksLTE5Nzk2OTM3
-MiwtMjAyMTg4MzExNl19
+eyJoaXN0b3J5IjpbMzMyODM1NjIsMjQ0ODY1NzEwLC03OTYwMD
+E3MzEsLTM1ODQwNjY1OSwxOTM0Nzc0NTY5LC0xOTc5NjkzNzIs
+LTIwMjE4ODMxMTZdfQ==
 -->
