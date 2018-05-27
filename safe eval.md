@@ -112,9 +112,8 @@ Some cons:
 At this point, you may be thinking, “Well you don’t need eval to do that. You could do it by building a calculator, and it wouldn’t be unsafe!”
 
 Ok, let’s build a calculator. First we have to build a lexer for the calculator so we can operate symbolically. Let’s assume that the backend lexes for us, and it returns something like this for the formula:
-
 ```js
-{
+let data = {
 	type: 'program',
 	val: [
 		{ type: 'number', val: 5 },
@@ -146,9 +145,11 @@ function handleOperator(stack, val) {
 	switch (val) {
 		case '+':
 			return val1 + val2;
-		// do other operators
+		// do other operators later
 	}
 }
+
+calculate(data, []) === 10; //true
 ```
 This is very quickly becoming a huge pain point for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. It’s no longer human readable in memory.
 
@@ -158,7 +159,7 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDM3NzgwLDE0ODI4OTc0OSw2MTc4NT
-k2MzksMTUzOTg1MjM5OCwxNDkzNjM0NjcwLDE4MzQzODA4LC03
-NzI5OTgzNzMsLTkwODUwMTE1OSwtMTk0ODYyNDg5M119
+eyJoaXN0b3J5IjpbMTA1NTQ4MjI3NiwxNDgyODk3NDksNjE3OD
+U5NjM5LDE1Mzk4NTIzOTgsMTQ5MzYzNDY3MCwxODM0MzgwOCwt
+NzcyOTk4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
 -->
