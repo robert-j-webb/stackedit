@@ -127,6 +127,7 @@ Ok, let’s build a calculator. First we have to build a lexer for the calculato
 	}
 };
 ```
+Then we create a reducer that gets the numeric value. 
 ```js
 function calculate(expression, stack) {
 	let val = 0;
@@ -157,15 +158,13 @@ function handleOperator(stack, val) {
 ```
 This is very quickly becoming a huge pain point for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. It’s no longer human readable in memory.
 
-  
-
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe - every time a developer lets unescaped html go into the Dom, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we just have to do that - for example showing images that the user has uploaded, or embedding HTML that’s been sufficiently sanitized by the server. Every time you read a comment on GitHub, or look at an image on twitter, that comes from unescaping data and injecting it directly into the dom.
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzOTg1MjM5OCwxNDkzNjM0NjcwLDE4Mz
-QzODA4LC03NzI5OTgzNzMsLTkwODUwMTE1OSwtMTk0ODYyNDg5
-M119
+eyJoaXN0b3J5IjpbLTE0ODE0NzcxMDEsMTUzOTg1MjM5OCwxND
+kzNjM0NjcwLDE4MzQzODA4LC03NzI5OTgzNzMsLTkwODUwMTE1
+OSwtMTk0ODYyNDg5M119
 -->
