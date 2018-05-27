@@ -75,7 +75,7 @@ Interpolation looks like this:
 function interpolate(formula, dependentKeys, dataStore){
 	return dependKeys.reduce((acc, key) => {
 		let value = dataStore.get(key); //Lookup the variable
-		acc.replace(key, value, ‘g’); //Replace all occurrences of the string with the value of the variable
+		acc.replace(Regexp(key, 'g'), value); //Replace all occurrences of the string with the value of the variable
 		return acc;
 	}, formula);
 };
@@ -157,6 +157,7 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NjAwMTczMSwtMzU4NDA2NjU5LDE5Mz
-Q3NzQ1NjksLTE5Nzk2OTM3MiwtMjAyMTg4MzExNl19
+eyJoaXN0b3J5IjpbMjQ0ODY1NzEwLC03OTYwMDE3MzEsLTM1OD
+QwNjY1OSwxOTM0Nzc0NTY5LC0xOTc5NjkzNzIsLTIwMjE4ODMx
+MTZdfQ==
 -->
