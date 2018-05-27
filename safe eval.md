@@ -75,45 +75,25 @@ Which then gets saved to the backend like this:
 They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
 
 Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything over 100 neopoints for 3%! How is this calculated?
-
-  
-
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
-
-  
 
 Interpolation looks like this:
 
 ```js
-
 function interpolate(formula, dependentKeys, dataStore){
-
-return dependKeys.reduce((acc, key) => {
-
-let value = dataStore.get(key); //Lookup the variable
-
-acc.replace(key, value, ‘g’); //Replace all occurrences of the string with the value of the variable
-
-return acc;
-
-}, formula);
-
+	return dependKeys.reduce((acc, key) => {
+		let value = dataStore.get(key); //Lookup the variable
+		acc.replace(key, value, ‘g’); //Replace all occurrences of the string with the value of the variable
+		return acc;
+	}, formula);
 };
-
 ```
-
 Calculation looks like this:
-
 ```js
-
 function safeEval(expression){
-
-const toEval = expression.replace(/[^0-9.()+\-*\/><=!&|?:]*/g, ‘’);
-
-return eval(toEval);
-
+	const toEval = expression.replace(/[^0-9.()+\-*\/><=!&|?:]*/g, ‘’);
+	return eval(toEval);	
 }
-
 ```
 
   
@@ -246,6 +226,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNDM4MDgsLTc3Mjk5ODM3MywtOTA4NT
-AxMTU5LC0xOTQ4NjI0ODkzXX0=
+eyJoaXN0b3J5IjpbODYwMTQzNDc2LDE4MzQzODA4LC03NzI5OT
+gzNzMsLTkwODUwMTE1OSwtMTk0ODYyNDg5M119
 -->
