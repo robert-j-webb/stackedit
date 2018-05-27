@@ -156,11 +156,13 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 ### Your junior developers are writing XSS bugs right now, without the help of eval.
 
-Here’s the thing that bothers me the most about calling ‘eval’ unsafe - every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we just have to do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Every time you read a comment on GitHub, or look at an image on twitter, that comes from unescaped data and injecting it directly into the dom.
+Here’s the thing that bothers me the most about calling ‘eval’ unsafe - every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we just have to do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is sufficiently sanitized HTML.
+
+
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNjMzODc4LDI0NDg2NTcxMCwtNzk2MD
-AxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2OSwtMTk3OTY5Mzcy
-LC0yMDIxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbLTIwODAyNjgxMzUsMjQ0ODY1NzEwLC03OT
+YwMDE3MzEsLTM1ODQwNjY1OSwxOTM0Nzc0NTY5LC0xOTc5Njkz
+NzIsLTIwMjE4ODMxMTZdfQ==
 -->
