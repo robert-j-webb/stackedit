@@ -30,6 +30,10 @@ You might be thinking at this point:
 
 Arithmetic eval is actually the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
 
+>What! Why would you ever need to do that! You're writing crazy code!
+
+Just wait a second, let me explain a use case.
+
 ### Let’s consider a scenario like this:
 
 User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased.` Then, they are provided with this screen to enter their prices in:
@@ -166,6 +170,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODUwMTU5NzYsMTkzNDc3NDU2OSwtMT
-k3OTY5MzcyLC0yMDIxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbMTE3MDM1MTg1LDE5MzQ3NzQ1NjksLTE5Nz
+k2OTM3MiwtMjAyMTg4MzExNl19
 -->
