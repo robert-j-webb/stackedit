@@ -45,9 +45,9 @@ function (numberPreviousItemsPurchased, price) {
 ```
 They fill in the field like so:
 ```js
-function (numberPreviousItemsPurchased, price) {
+function calculateDiscount(numberPreviousItemsPurchased, price) {
 	if  (price  <  100) {
-		return  price;
+		return  0;
 	}
 	let  discount  = numberPreviousItemsPurchased  >  5
 		?  0.05
@@ -58,7 +58,7 @@ function (numberPreviousItemsPurchased, price) {
 (This step might be pretty tricky to implement) This gets compiled into:
 ```js
 price  <  100
-	?  price
+	?  0
 	:  price  -
 	   price  *
 		(numberPreviousItemsPurchased  >  5
@@ -169,6 +169,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ1OTUzMjQsMTkzNDc3NDU2OSwtMT
-k3OTY5MzcyLC0yMDIxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbLTM1ODQwNjY1OSwxOTM0Nzc0NTY5LC0xOT
+c5NjkzNzIsLTIwMjE4ODMxMTZdfQ==
 -->
