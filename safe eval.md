@@ -155,9 +155,6 @@ function handleOperator(stack, val) {
 	}
 }
 ```
-
-  
-
 This is very quickly becoming a huge pain point for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. It’s no longer human readable in memory.
 
   
@@ -172,6 +169,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjczNjM1NDgsMTgzNDM4MDgsLTc3Mj
-k5ODM3MywtOTA4NTAxMTU5LC0xOTQ4NjI0ODkzXX0=
+eyJoaXN0b3J5IjpbMTQ5MzYzNDY3MCwxODM0MzgwOCwtNzcyOT
+k4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
 -->
