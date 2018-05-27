@@ -74,7 +74,8 @@ Which then gets saved to the backend like this:
 ```
 They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
 
-Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything over 100 neopoints for 3%! How is this calculated?
+Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything over 100 neopoints for 3%! 
+### How is this calculated?
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
 
 Interpolation looks like this:
@@ -97,14 +98,14 @@ function safeEval(expression){
 ```
 Also, change detection has to be implemented as well, such that if Ed buys a 4th item, the price would know to update. Most modern web frameworks feature some way of triggering recalculation of values if you update dependent keys, so I’ll that code out.
 
-I think this is an amazing solution as far as giving your users flexibility and for lessening the burden of extensibility on developers. Here are some pros that come to mind.
+I think this is an amazing solution as far as giving your users flexibility and for lessening the burden of extensibility on developers.
 
+### Pros
 1.  Powers users will love this - they can tweak their formulas to their heart’s content. They can even create new ways of discounting that the developer didn’t think of!
 2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out the new promotion.
 3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation.
 
-Some cons:
-
+### Cons
 1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see in real time how things are affected.
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
@@ -159,7 +160,7 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NTQ4MjI3NiwxNDgyODk3NDksNjE3OD
-U5NjM5LDE1Mzk4NTIzOTgsMTQ5MzYzNDY3MCwxODM0MzgwOCwt
-NzcyOTk4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
+eyJoaXN0b3J5IjpbOTg2NDIxNzMzLDE0ODI4OTc0OSw2MTc4NT
+k2MzksMTUzOTg1MjM5OCwxNDkzNjM0NjcwLDE4MzQzODA4LC03
+NzI5OTgzNzMsLTkwODUwMTE1OSwtMTk0ODYyNDg5M119
 -->
