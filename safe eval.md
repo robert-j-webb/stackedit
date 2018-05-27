@@ -53,6 +53,7 @@ function (numberPreviousItemsPurchased, price) {
 ```
 (This step might be pretty tricky to implement) This gets compiled into:
 ```js
+//This is a pretty printed version of it
 price  <  100
 	?  price
 	:  price  -
@@ -65,23 +66,12 @@ Which then gets saved to the backend like this:
 
 ```js
 {
-
-//The spaces would be stripped here, but it makes it less readable
-
-formula: “price<100 ? price : price - price * (numberPreviousItemsPurchased > 5 ? .05 : numberPreviousItemsPurchased * .01)”
-
-dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’],
-
-affects: ‘all’,
-
-type: ‘discount’
-
+	//The spaces would be stripped here, but it makes it less readable
+	formula: “price<100 ? price : price - price * (numberPreviousItemsPurchased > 5 ? .05 : numberPreviousItemsPurchased * .01)”,
+	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’],
+	type: ‘discount’
 }
-
 ```
-
-  
-
 They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
 
 Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything over 100 neopoints for 3%! How is this calculated?
@@ -256,6 +246,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDAwOTkxOSwtNzcyOTk4MzczLC05MD
-g1MDExNTksLTE5NDg2MjQ4OTNdfQ==
+eyJoaXN0b3J5IjpbMTgzNDM4MDgsLTc3Mjk5ODM3MywtOTA4NT
+AxMTU5LC0xOTQ4NjI0ODkzXX0=
 -->
