@@ -103,54 +103,29 @@ I think this is an amazing solution as far as giving your users flexibility and 
 2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out the new promotion.
 3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation.
 
-  
-
 Some cons:
-
-  
 
 1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see in real time how things are affected.
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
 
-  
-
-  
-
 At this point, you may be thinking, “Well you don’t need eval to do that. You could do it by building a calculator, and it wouldn’t be unsafe!”
-
-  
 
 Ok, let’s build a calculator. First we have to build a lexer for the calculator so we can operate symbolically. Let’s assume that the backend lexes for us, and it returns something like this for the formula:
 
-  
-
 ```js
-
 {
-
 formula: {
-
 program: {
-
 type: 'program',
-
 val: [
-
 { type: 'number', val: 5 },
-
 { type: 'number', val: 5 },
-
 { type: 'operator', val: '+' }
-
 ]
-
 }
-
 }
-
 };
-
 ```js
 
 function calculate(expression, stack) {
@@ -219,6 +194,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NzYxMDg4NiwxODM0MzgwOCwtNzcyOT
-k4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
+eyJoaXN0b3J5IjpbLTEyNTU1MzU2MjAsMTgzNDM4MDgsLTc3Mj
+k5ODM3MywtOTA4NTAxMTU5LC0xOTQ4NjI0ODkzXX0=
 -->
