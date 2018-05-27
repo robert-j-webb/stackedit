@@ -95,16 +95,9 @@ function safeEval(expression){
 	return eval(toEval);	
 }
 ```
-
-  
-
 Also, change detection has to be implemented as well, such that if Ed buys a 4th item, the price would know to update. Most modern web frameworks feature some way of triggering recalculation of values if you update dependent keys, so I’ll that code out.
 
-  
-
 I think this is an amazing solution as far as giving your users flexibility and for lessening the burden of extensibility on developers. Here are some pros that come to mind.
-
-  
 
 1.  Powers users will love this - they can tweak their formulas to their heart’s content. They can even create new ways of discounting that the developer didn’t think of!
 2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out the new promotion.
@@ -226,6 +219,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwMTQzNDc2LDE4MzQzODA4LC03NzI5OT
-gzNzMsLTkwODUwMTE1OSwtMTk0ODYyNDg5M119
+eyJoaXN0b3J5IjpbMTA2NzYxMDg4NiwxODM0MzgwOCwtNzcyOT
+k4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
 -->
