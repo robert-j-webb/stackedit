@@ -127,7 +127,7 @@ Ok, let’s build a calculator. First we have to build a lexer for the calculato
 	}
 };
 ```
-Then we create a reducer that gets the numeric value. 
+Then we create a reducer that gets the numeric value. I'm leaving out everything besides what's needed
 ```js
 function calculate(expression, stack) {
 	let val = 0;
@@ -143,8 +143,6 @@ function calculate(expression, stack) {
 	}
 	return val;
 }
-
-  
 
 function handleOperator(stack, val) {
 	const val1 = stack.pop();
@@ -164,7 +162,7 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODE0NzcxMDEsMTUzOTg1MjM5OCwxND
-kzNjM0NjcwLDE4MzQzODA4LC03NzI5OTgzNzMsLTkwODUwMTE1
-OSwtMTk0ODYyNDg5M119
+eyJoaXN0b3J5IjpbNjE3ODU5NjM5LDE1Mzk4NTIzOTgsMTQ5Mz
+YzNDY3MCwxODM0MzgwOCwtNzcyOTk4MzczLC05MDg1MDExNTks
+LTE5NDg2MjQ4OTNdfQ==
 -->
