@@ -112,7 +112,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 At this point, you may be thinking,
 >“Well you don’t need eval to do that. You could do it by building a calculator, and it wouldn’t be unsafe!”
 
-You're not wrong
+It's *safer* to use a calculator, but it's also way more effort. To demonstrate, let's go along with your plan.
 
 ### Ok, let’s build a calculator.
 
@@ -167,6 +167,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MjM2MjA0MCwxOTM0Nzc0NTY5LC0xOT
+eyJoaXN0b3J5IjpbMTQ4Mzc4NjkyMCwxOTM0Nzc0NTY5LC0xOT
 c5NjkzNzIsLTIwMjE4ODMxMTZdfQ==
 -->
