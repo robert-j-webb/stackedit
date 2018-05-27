@@ -154,7 +154,7 @@ function handleOperator(stack, val) {
 
 calculate(parsedFormula, []) === 10; //true
 ```
-This is very quickly becoming a huge pain point for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. It’s no longer human readable in memory.
+This is very quickly becoming a huge pain for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. It’s no longer human readable in memory.
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
@@ -162,7 +162,8 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODM4Njc2NywxNDgyODk3NDksNjE3OD
-U5NjM5LDE1Mzk4NTIzOTgsMTQ5MzYzNDY3MCwxODM0MzgwOCwt
-NzcyOTk4MzczLC05MDg1MDExNTksLTE5NDg2MjQ4OTNdfQ==
+eyJoaXN0b3J5IjpbLTgxNDU3MDQzMywyMDI4Mzg2NzY3LDE0OD
+I4OTc0OSw2MTc4NTk2MzksMTUzOTg1MjM5OCwxNDkzNjM0Njcw
+LDE4MzQzODA4LC03NzI5OTgzNzMsLTkwODUwMTE1OSwtMTk0OD
+YyNDg5M119
 -->
