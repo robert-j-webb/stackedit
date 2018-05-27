@@ -113,6 +113,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 At this point, you may be thinking,
 >“Well you don’t need eval to do that. You could do it by building a calculator, and it wouldn’t be unsafe!”
 
+### Ok, let’s build a calculator.
 
 First we have to build a lexer for the calculator so we can operate symbolically. Let’s assume that the backend lexes for us, and it returns something like this for the formula:
 ```js
@@ -163,8 +164,8 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY1Mjg2MjIxLC04MTQ1NzA0MzMsMjAyOD
-M4Njc2NywxNDgyODk3NDksNjE3ODU5NjM5LDE1Mzk4NTIzOTgs
-MTQ5MzYzNDY3MCwxODM0MzgwOCwtNzcyOTk4MzczLC05MDg1MD
-ExNTksLTE5NDg2MjQ4OTNdfQ==
+eyJoaXN0b3J5IjpbLTIwMjE4ODMxMTYsLTgxNDU3MDQzMywyMD
+I4Mzg2NzY3LDE0ODI4OTc0OSw2MTc4NTk2MzksMTUzOTg1MjM5
+OCwxNDkzNjM0NjcwLDE4MzQzODA4LC03NzI5OTgzNzMsLTkwOD
+UwMTE1OSwtMTk0ODYyNDg5M119
 -->
