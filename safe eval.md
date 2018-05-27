@@ -24,7 +24,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate whichever boolean exp
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
 2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with just this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
-4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. Also, this makes the possible formula much more complicated, and therefore more difficult to debug.
+4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. See [jsFuck](http://www.jsfuck.com/) for example. Also, this makes the possible formula much more complicated, and therefore more difficult to debug.
 
 You might be thinking at this point, well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
 
@@ -274,5 +274,6 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe - ev
 
 The fact is, a reduced character set eval is just as safe as rendering an image that a user uploads. If you sanitize the URL, you will be fine. If you don’t, you will have an XSS vulnerability. As developers, we have to be cautious of allowing users ability to add data to our site, but we don’t need to be afraid of it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwODUwMTE1OSwtMTk0ODYyNDg5M119
+eyJoaXN0b3J5IjpbLTc3Mjk5ODM3MywtOTA4NTAxMTU5LC0xOT
+Q4NjI0ODkzXX0=
 -->
