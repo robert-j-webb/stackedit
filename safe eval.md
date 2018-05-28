@@ -22,7 +22,7 @@ By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any alg
 
 ### ```[0-9 . () +-/*]``` Arithmetic
 
-0-9 and arithmetic operators allow us to make formulas and expressions that are arithmetic, like describing a distance or a range. 
+0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them.
 
 ### ```[><=! &|]``` Boolean Expressions
 
@@ -208,11 +208,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTc3MzY5ODksLTIxODcxMjgwNywxMT
-I3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0ODUsLTI5NDk2
-OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMTM4NjM3MzAwOS
-w3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYz
-NDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMz
-ksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIx
-MTE5NTcyMzddfQ==
+eyJoaXN0b3J5IjpbMTYxNDg4MDMwLC0yMTg3MTI4MDcsMTEyNz
+kyMjgwNSwtMTgyMDA5NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1
+NjYsLTY5Njg5NDEwNCwxMTUyMDgzNzYwLDEzODYzNzMwMDksNz
+g1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAyOSw3NzQ2MzQ3
+NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC
+0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC0yMTEx
+OTU3MjM3XX0=
 -->
