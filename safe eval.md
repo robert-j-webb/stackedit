@@ -41,14 +41,11 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 || Create a Discount |
 |--|--|
 | Variables |price, numberPreviousItemsPurchased, affinityForCats, isActuallyARobot |
-|Formula|e ** |
-
-#### (Advanced!) Create a discount:
-
+|Formula|e ^(i * pi) + 1 === 0|
 
 They fill in the field like so:
 ```js
-price  -
+Formula = price  -
 price  *
 	(numberPreviousItemsPurchased  >  5) ?
 		0.05 :
@@ -181,7 +178,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA5NzM3MjksMTY2NjM4NjMsLTE2Nz
-E4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2
-MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbMTU4OTY0NTQ2NCwtMTk4MDk3MzcyOSwtMT
+Y3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMTgy
+MTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
 -->
