@@ -7,6 +7,9 @@
 — MDN page on eval
 
 Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust. Today, I'm going to argue that there are valid use cases which can only be solved with eval, and that you can use eval on sources that you don't trust. I'm also going to deal with all the arguments that come up against using eval, including:
+* There is no valid use case for eval.
+* Eval is always a security risk.
+* Even if you find a valid use case for eval that is secure, you will be making your code base worse by including it.
 * 
 
 JavaScript developers everywhere agree that eval is never to be used in production code because it’s unsafe, it’s hacky, it can lead to difficult to predict behavior, and it doesn't  I am not disputing that about eval, however, a safe eval could be made that has none of these problems. Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away. These characters are:
@@ -177,6 +180,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODMyMTA3NTYsMjEwMDExMzY4Nyw4OD
-EyNzUwNThdfQ==
+eyJoaXN0b3J5IjpbLTQwNjY4OTE0OSwyMTAwMTEzNjg3LDg4MT
+I3NTA1OF19
 -->
