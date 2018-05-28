@@ -146,28 +146,34 @@ console.log(parsedFormula);
 ```
 Then we create a calculator that gets the numeric value by recursing through the tree.
 ```js
-function calculate(expression, stack, dataStore) {
-	let val = 0;
-	switch (expression.type) {
-		case 'program':
-			return expression.val.reduce((sum, exp) => sum + calculate(exp, stack, dataStore), val);
-		break;
-		case 'number':
-			stack.push(expression.val);
-		case 'operator':
-			return val + handleOperator(stack, expression.val);
-		case 'variable':
-			stack.push(dataStore[expression.val]);
-	}
-	return val;
+function  calculate(expression, stack, dataStore) {
+  const  val  =  0;
+  switch  (expression.type) {
+    case  'program':
+      return  expression.val.reduce(
+        (sum, exp)  =>  sum  +  calculate(exp, stack, dataStore),
+val
+);
+break;
+case  'number':
+stack.push(expression.val);
+case  'operator':
+return  val  +  handleOperator(stack, expression.val);
+case  'variable':
+stack.push(dataStore[expression.val]);
+}
+return  val;
+}
+function  handleOperator(stack, val) {
+switch  (val) {
+case  '+':
+return  parseInt(stack.pop())  +  parseInt(stack.pop());
+}
 }
 
-function handleOperator(stack, val) {
-	switch (val) {
-		case '+':
-			return parseInt(stack.pop()) + parseInt(stack.pop());
-	}
-}
+  
+
+calculate(parsedFormula, [], { price: 5 }); // 10
 
 calculate(parsedFormula, [], { price: 5 }); // 10
 ```
@@ -201,11 +207,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MTAzNjQ4NSwtMjk0OTY5NTY2LC02OT
-Y4OTQxMDQsMTE1MjA4Mzc2MCwxMzg2MzczMDA5LDc4NTM0MzA2
-NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0NzQ3LC0xNT
-A4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOSwtMTYyNzI5
-NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNy
-wtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0x
-MDYyMzM4MDI3XX0=
+eyJoaXN0b3J5IjpbMTU1OTAyMTg5NywtMjYxMDM2NDg1LC0yOT
+Q5Njk1NjYsLTY5Njg5NDEwNCwxMTUyMDgzNzYwLDEzODYzNzMw
+MDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAyOSw3Nz
+Q2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5
+MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC
+0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0y
+NjM3NDU1MDddfQ==
 -->
