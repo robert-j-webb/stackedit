@@ -6,19 +6,16 @@
 
 — MDN page on eval
 
-Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoreti
-* There is no valid use case for eval.
-* Eval is a huge security risk if you use it with user data.
-* Even if you find a valid use case for eval that is secure, you will be making your code base worse by including it.
-* 
-
-JavaScript developers everywhere agree that eval is never to be used in production code because it’s unsafe, it’s hacky, it can lead to difficult to predict behavior, and it doesn't  I am not disputing that about eval, however, a safe eval could be made that has none of these problems. Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away. These characters are:
+Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of safe eval.
+ 
+### Introducing Safe Eval
+ Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away. These characters are:
 ```js
 [0-9.()] [+-/*] [><=!] [&|] [?:]
 ```
 ### Let’s evaluate what’s allowed with this set of characters:
 ### ```[?:]``` Ternary expressions
-By using expressions like  8 + 5 > 3 ? 5 : 3, you can replicate almost any algorithm without iteration or recursion in it. By avoiding looping or recursion, we have a guarantee that the formula supplied will halt.
+By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any algorithm without iteration or recursion in it. 
 ### ```[0-9 . () +-/*]``` Arithmetic
 0-9 and arithmetic operators allow us to make formulas and expressions that are arithmetic, like describing a distance or a range. We don’t have access to the Math functions, but we can still emulate many of them by reducing them into their elementary forms. By avoiding allowing the Math function, we don’t have to worry about the dangers of allowing strings or characters to be parsed.
 ### ```[><=! &|]``` Boolean Expressions
@@ -180,6 +177,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY1NDM5NzkyLC00MDY2ODkxNDksMjEwMD
-ExMzY4Nyw4ODEyNzUwNThdfQ==
+eyJoaXN0b3J5IjpbLTEyMzMyMzM0MTEsLTQwNjY4OTE0OSwyMT
+AwMTEzNjg3LDg4MTI3NTA1OF19
 -->
