@@ -107,7 +107,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 
 ### Pros
 1.  Powers users will love this - they can tweak their formulas to their heart’s content. They can even create new ways of discounting that the developer didn’t think of!
-2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out the new promotion.
+2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out whatev
 3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation. 
 
 ### Cons
@@ -210,11 +210,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMjgwOTU1OSw4OTA4NjM4NDcsLTIxOD
-cxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0
-ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMT
-M4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0
-MDI5LDc3NDYzNDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1My
-w1NzkxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05Njkx
-Mjc1NDRdfQ==
+eyJoaXN0b3J5IjpbLTE2NDcxNTc4MTAsLTcwMjgwOTU1OSw4OT
+A4NjM4NDcsLTIxODcxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2
+OTEzLC0yNjEwMzY0ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LD
+ExNTIwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAy
+NzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkxNS
+wtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNzkw
+MTY5NDU5XX0=
 -->
