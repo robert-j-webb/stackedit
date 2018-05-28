@@ -37,16 +37,16 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
-So Safe Eval is safe! You can confidently run code from users by restricting their  of JS to a small, purely mathematical instruction set.
+So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, purely mathematical instruction set.
 
 You might be thinking at this point:
->Well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
+>Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
 
 Arithmetic eval is actually the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
 
 >What! Why would you ever need to do that! There's no valid use case for this!
 
-### A valid use case for Safe Eval:
+### A valid use case for Interpolation into Safe Eval:
 
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
 || Create a Discount |
@@ -222,8 +222,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTY0NDc4MDcsMzQwODA2OTQyLC0xMj
-QxMDc1Mjg5LDE2MDU0OTMwMTEsLTIxMDYwMTk5NDQsMTMxMjY0
-MjIxMCwxNDk4NjUyMzM5LC04OTkzMTA0NTIsLTEwOTg4MzMyMD
-ddfQ==
+eyJoaXN0b3J5IjpbMTE0ODc0Njg0MiwtMTc1NjQ0NzgwNywtMT
+I0MTA3NTI4OSwxNjA1NDkzMDExLC0yMTA2MDE5OTQ0LDEzMTI2
+NDIyMTAsMTQ5ODY1MjMzOSwtODk5MzEwNDUyLC0xMDk4ODMzMj
+A3XX0=
 -->
