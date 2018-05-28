@@ -152,18 +152,18 @@ This is very quickly becoming a huge pain for me to write. I have to write compl
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
->"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation."
+>"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
 ### Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
-Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we just have to do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server.
+Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we ]do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server.
 
-If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. 
+If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs test, it will need to be battle hardened and it will need to 
 
 >"But no company would ever put the effort into making a library 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNTQ1NzEyMiwyNDQ4NjU3MTAsLTc5Nj
-AwMTczMSwtMzU4NDA2NjU5LDE5MzQ3NzQ1NjksLTE5Nzk2OTM3
-MiwtMjAyMTg4MzExNl19
+eyJoaXN0b3J5IjpbMjI5MDY0Nzk5LDI0NDg2NTcxMCwtNzk2MD
+AxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2OSwtMTk3OTY5Mzcy
+LC0yMDIxODgzMTE2XX0=
 -->
