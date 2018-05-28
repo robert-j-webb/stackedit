@@ -48,7 +48,10 @@ function (numberPreviousItemsPurchased, price) {
 ```
 They fill in the field like so:
 ```js
-
+price  -
+price  *
+	(numberPreviousItemsPurchased  >  5) ?
+		0.05 : numberPreviousItemsPurchased  *  0.01;
 ```
 Which then gets saved to the backend like this:
 
@@ -171,6 +174,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzOTM2OTAwMCwtNDA2Njg5MTQ5LDIxMD
+eyJoaXN0b3J5IjpbMTkwNDcxMTUyMywtNDA2Njg5MTQ5LDIxMD
 AxMTM2ODcsODgxMjc1MDU4XX0=
 -->
