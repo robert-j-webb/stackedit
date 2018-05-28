@@ -33,7 +33,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
 2.  Modify any variables! There’s no way to get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
-4.  Make a string, object, or array. Unfortunately, by allowing quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
+4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
 You might be thinking at this point:
 >Well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
@@ -47,8 +47,8 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
 || Create a Discount |
 |--|--|
-| Variables |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
-|Formula|*e ^(i * pi) + 1 === 0*|
+| Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
+|Formula (<text>|*e ^(i * pi) + 1 === 0*|
 
 They select price and numberPreviousItemsPurchased as their variables.
 They fill in the Formula field like so:
@@ -208,7 +208,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjM0OTEwMyw4OTA4NjM4NDcsLTIxOD
+eyJoaXN0b3J5IjpbMTAzMTc1ODI4Nyw4OTA4NjM4NDcsLTIxOD
 cxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0
 ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMT
 M4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0
