@@ -121,7 +121,7 @@ raw.split('  ').forEach(symbol => {
 
 if  (/[+]/.test(symbol)) {
 
-lexed.push(tack.pop(), stack.pop(), { type: 'operator', val: '+' });
+lexed.push(stack.pop(), stack.pop(), { type: 'operator', val: '+' });
 return;
 }
 if  (/[0-9]+/.test(symbol)) {
@@ -203,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwNzAwNCwtMTgyMDA5NjkxMywtMjYxMD
-M2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNCwxMTUyMDgzNzYw
-LDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNT
-AyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0
-NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOT
-Y5MTI3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1
-NjA3MzgwXX0=
+eyJoaXN0b3J5IjpbMTEyNzkyMjgwNSw5NzA3MDA0LC0xODIwMD
+k2OTEzLC0yNjEwMzY0ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0
+LDExNTIwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyOD
+AyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkx
+NSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNz
+kwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcyMzcsLTE0NDg0
+Nzc3ODVdfQ==
 -->
