@@ -119,7 +119,7 @@ function  lex(raw) {
 	const  lexed  = [];
 	raw.split(' ').forEach(symbol => {
 		if  (/[+]/.test(symbol)) {
-			lexed.push([stack.pop(), stack.pop(), { type: 'operator', val: '+' }]);
+			lexed.push(stack.pop(), stack.pop(), { type: 'operator', val: '+' });
 			return;
 		}
 		if  (/[0-9]+/.test(symbol)) {
@@ -133,7 +133,8 @@ function  lex(raw) {
 	});
 	return { type: 'program', val: lexed };
 }
-console.log(lex('price 5 +'));
+let parsedFormula = lex('price 5 +');
+console.log(parsedFormula);
 {
 	type: 'program',
 	val: [
@@ -172,7 +173,7 @@ function handleOperator(stack, val) {
 	}
 }
 
-calculate(parsedFormula, []) === 10; //true
+calculate(parsedFormula, [], { price: 5 }) === 10; //true
 ```
 
 ### This is really complicated!
@@ -202,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MDQyNzY0MywtMTk1OTQ2ODQ1Myw1Nz
-kxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1
-NDQsLTIxMTE5NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczOD
-AsLTI2Mzc0NTUwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0x
-OTgwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOT
-U1Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0
-MDBdfQ==
+eyJoaXN0b3J5IjpbNzY3NzkzODU2LC0xOTU5NDY4NDUzLDU3OT
+E3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0
+NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MC
+wtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5
+ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NT
+U3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQw
+MF19
 -->
