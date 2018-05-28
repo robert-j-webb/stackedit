@@ -174,8 +174,5 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTM1NTIzNywyMzc4NDM4ODMsMTExMD
-EzNTY4MiwxMTAyNTE3NDMyLDI0NDg2NTcxMCwtNzk2MDAxNzMx
-LC0zNTg0MDY2NTksMTkzNDc3NDU2OSwtMTk3OTY5MzcyLC0yMD
-IxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbMTQxNTM1NTIzN119
 -->
