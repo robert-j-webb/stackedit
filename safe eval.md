@@ -82,6 +82,7 @@ function interpolate(formula, dependentKeys, dataStore){
 ```
 Calculation looks like this:
 ```js
+// C
 function safeEval(expression){
 	const toEval = expression.replace(/[^0-9.()+\-*\/><=!&|?:]*/g, ‘’);
 	try {
@@ -174,7 +175,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3ODQzODgzLDExMTAxMzU2ODIsMTEwMj
-UxNzQzMiwyNDQ4NjU3MTAsLTc5NjAwMTczMSwtMzU4NDA2NjU5
-LDE5MzQ3NzQ1NjksLTE5Nzk2OTM3MiwtMjAyMTg4MzExNl19
+eyJoaXN0b3J5IjpbLTQwNzQ1ODM2OCwxMTEwMTM1NjgyLDExMD
+I1MTc0MzIsMjQ0ODY1NzEwLC03OTYwMDE3MzEsLTM1ODQwNjY1
+OSwxOTM0Nzc0NTY5LC0xOTc5NjkzNzIsLTIwMjE4ODMxMTZdfQ
+==
 -->
