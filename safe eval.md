@@ -9,7 +9,7 @@
 Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
  
 ### Introducing Safe Eval
- Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away. These characters are:
+ Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  This prevents XSS vulneThese characters are:
 ```js
 [0-9.()] [+-/*] [><=!] [&|] [?:]
 ```
@@ -31,7 +31,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 ### Let’s evaluate what this can’t do:
 
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
-2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
+2.  Modify any variables! There’s no way to get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
@@ -208,11 +208,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDg4MDMwLC0yMTg3MTI4MDcsMTEyNz
-kyMjgwNSwtMTgyMDA5NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1
-NjYsLTY5Njg5NDEwNCwxMTUyMDgzNzYwLDEzODYzNzMwMDksNz
-g1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAyOSw3NzQ2MzQ3
-NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC
-0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC0yMTEx
-OTU3MjM3XX0=
+eyJoaXN0b3J5IjpbLTQ3NzM2MDU5NywtMjE4NzEyODA3LDExMj
+c5MjI4MDUsLTE4MjAwOTY5MTMsLTI2MTAzNjQ4NSwtMjk0OTY5
+NTY2LC02OTY4OTQxMDQsMTE1MjA4Mzc2MCwxMzg2MzczMDA5LD
+c4NTM0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0
+NzQ3LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOS
+wtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjEx
+MTk1NzIzN119
 -->
