@@ -127,7 +127,7 @@ function  lex(raw) {
 			return;
 		}
 		if(/[a-z]*/.test(symbol)) {
-			stack.push({type: 
+			stack.push({type: 'variable
 		
 	});
 	return { type: 'program', val: lexed };
@@ -198,10 +198,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAyNjMxMjEyLC0xNjI3Mjk3MzE5LDc5MD
-E2OTQ1OSwtOTY5MTI3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3
-Nzg1LC0xODI1NjA3MzgwLC0yNjM3NDU1MDcsLTEwNjIzMzgwMj
-csLTgwMTUyNjI3MiwtMTk4MDk3MzcyOSwtMTY3MTg3NDcxMywt
-MTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMTgyMTYwMzM2LC05Nj
-k1MzU0ODcsMjEyODQ5NDAwXX0=
+eyJoaXN0b3J5IjpbNTc5MTc5MTM5LDcwMjYzMTIxMiwtMTYyNz
+I5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIz
+NywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC
+0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2
+NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4Mj
+E2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
 -->
