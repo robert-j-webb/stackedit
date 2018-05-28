@@ -17,14 +17,14 @@ Eval is the universally shunned function of the JavaScript standard library. Fol
 ### ```[?:]``` Ternary expressions
 By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any algorithm without iteration or recursion in it. 
 ### ```[0-9 . () +-/*]``` Arithmetic
-0-9 and arithmetic operators allow us to make formulas and expressions that are arithmetic, like describing a distance or a range. We don’t have access to the Math functions, but we can still emulate many of them by reducing them into their elementary forms. By avoiding allowing the Math function, we don’t have to worry about the dangers of allowing strings or characters to be parsed.
+0-9 and arithmetic operators allow us to make formulas and expressions that are arithmetic, like describing a distance or a range. 
 ### ```[><=! &|]``` Boolean Expressions
 
-By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate whichever boolean expressions we need or would want access to.
+By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressions.
 
 ### Let’s evaluate what this can’t do:
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
-2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with just this set of characters.
+2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. Also, this makes the possible formula much more complicated, and therefore more difficult to debug.
 
@@ -177,6 +177,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzMyMzM0MTEsLTQwNjY4OTE0OSwyMT
+eyJoaXN0b3J5IjpbLTE3MDM4NDAwNDcsLTQwNjY4OTE0OSwyMT
 AwMTEzNjg3LDg4MTI3NTA1OF19
 -->
