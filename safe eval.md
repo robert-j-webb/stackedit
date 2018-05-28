@@ -192,7 +192,7 @@ If we can find a way to write a sanitizer for Markdown, then we can find a way t
 
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-I agree that
+I agree that this could be difficult. However, if the project is well maintained and doesn't grow in feature size too much, then it should be capable of stopi
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
@@ -203,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MjQ3MDE4NCwtNzk4MTg0ODUwLDEzOD
-YzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAy
-OSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNT
-c5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3
-NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3Mz
-gwLC0yNjM3NDU1MDcsLTEwNjIzMzgwMjcsLTgwMTUyNjI3Miwt
-MTk4MDk3MzcyOV19
+eyJoaXN0b3J5IjpbLTE0NTE2NTM2NzQsMTU0MjQ3MDE4NCwxMz
+g2MzczMDA5LDc4NTM0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQw
+MjksNzc0NjM0NzQ3LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLD
+U3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEy
+NzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNz
+M4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIs
+LTE5ODA5NzM3MjldfQ==
 -->
