@@ -9,7 +9,7 @@
 Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
  
 ### Introducing Safe Eval
- Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  This prevents XSS vulneThese characters are:
+ Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  This prevents XSS vulnerabilities.These characters are:
 ```js
 [0-9.()] [+-/*] [><=!] [&|] [?:]
 ```
@@ -208,11 +208,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzM2MDU5NywtMjE4NzEyODA3LDExMj
-c5MjI4MDUsLTE4MjAwOTY5MTMsLTI2MTAzNjQ4NSwtMjk0OTY5
-NTY2LC02OTY4OTQxMDQsMTE1MjA4Mzc2MCwxMzg2MzczMDA5LD
-c4NTM0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0
-NzQ3LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOS
-wtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjEx
-MTk1NzIzN119
+eyJoaXN0b3J5IjpbODkwODYzODQ3LC00NzczNjA1OTcsLTIxOD
+cxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0
+ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMT
+M4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0
+MDI5LDc3NDYzNDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1My
+w1NzkxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05Njkx
+Mjc1NDRdfQ==
 -->
