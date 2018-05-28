@@ -198,14 +198,14 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Summary
 
-Eval is one of the most notorious functions in the JavaScript standard library as far as I know, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're st
+Eval is one of the most notorious functions in the JavaScript standard library as far as I know, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDk2OTU2NiwtMTIzODU4MDA3NSwtNj
-k2ODk0MTA0LDExNTIwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMw
-NjUsMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMT
-UwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2Mjcy
-OTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcyMz
-csLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNywt
-MTA2MjMzODAyN119
+eyJoaXN0b3J5IjpbLTQ2OTc3MDIxNCwtMjk0OTY5NTY2LC02OT
+Y4OTQxMDQsMTE1MjA4Mzc2MCwxMzg2MzczMDA5LDc4NTM0MzA2
+NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0NzQ3LC0xNT
+A4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOSwtMTYyNzI5
+NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNy
+wtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0x
+MDYyMzM4MDI3XX0=
 -->
