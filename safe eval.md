@@ -173,7 +173,7 @@ function handleOperator(stack, val) {
 	}
 }
 
-calculate(parsedFormula, [], { price: 5 }) === 10; //true
+calculate(parsedFormula, [], { price: 5 })
 ```
 
 ### This is really complicated!
@@ -203,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY3NzkzODU2LC0xOTU5NDY4NDUzLDU3OT
-E3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0
-NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MC
-wtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5
-ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NT
-U3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQw
-MF19
+eyJoaXN0b3J5IjpbLTE1MDgxMTg5MTUsNzY3NzkzODU2LC0xOT
+U5NDY4NDUzLDU3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0
+NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NS
+wtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04
+MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1Mj
+YxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1
+NDg3LDIxMjg0OTQwMF19
 -->
