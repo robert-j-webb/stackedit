@@ -135,11 +135,8 @@ stack.push(symbol);
 return;
 
 }
-
 });
-
 return { type: 'program', val: lexed };
-
 }
 ```
 ```js
@@ -209,9 +206,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MzQxNTU2MiwtMjExMTk1NzIzNywtMT
-Q0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYy
-MzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4Nz
-Q3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMz
-NiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbLTk2OTEyNzU0NCwtODUzNDE1NTYyLC0yMT
+ExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0yNjM3
+NDU1MDcsLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMTk4MDk3Mz
+cyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMy
+OSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
 -->
