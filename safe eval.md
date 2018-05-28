@@ -107,7 +107,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
 
 At this point, you may be thinking,
->“Well you don’t need eval to do that. You could do it by building a calculator, and it wouldn’t be unsafe!”
+>“Well you don’t need eval to do that. You could do the exact same implementation using a calculator, and it wouldn't be so unsafe!"
 
 ### Ok, let’s build a calculator.
 
@@ -179,8 +179,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyNzgzNzA2LC04MDE1MjYyNzIsLTE5OD
-A5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3
-NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF
-19
+eyJoaXN0b3J5IjpbLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMT
+k4MDk3MzcyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1
+NTc3ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5ND
+AwXX0=
 -->
