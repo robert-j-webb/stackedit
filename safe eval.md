@@ -162,10 +162,12 @@ If we can find a way to write a sanitizer for Markdown, then we can find a way t
 
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-I think that having tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS. As far as the project growing to the point that it becomes it's own language parsing tool, I think it's important that the proje
+I think that having tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjIxODE1MzcsMTEwMjUxNzQzMiwyND
-Q4NjU3MTAsLTc5NjAwMTczMSwtMzU4NDA2NjU5LDE5MzQ3NzQ1
-NjksLTE5Nzk2OTM3MiwtMjAyMTg4MzExNl19
+eyJoaXN0b3J5IjpbMTExMDEzNTY4MiwxMTAyNTE3NDMyLDI0ND
+g2NTcxMCwtNzk2MDAxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2
+OSwtMTk3OTY5MzcyLC0yMDIxODgzMTE2XX0=
 -->
