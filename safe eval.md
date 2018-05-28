@@ -134,7 +134,7 @@ function calculate(expression, stack) {
 	let val = 0;
 	switch (expression.type) {
 		case 'program':
-			val = expression.val.reduce((sum, exp) => sum + calculate(exp, stack), val);
+			return expression.val.reduce((sum, exp) => sum + calculate(exp, stack), val);
 		break;
 		case 'number':
 			stack.push(expression.val);
@@ -151,7 +151,7 @@ function handleOperator(stack, val) {
 	switch (val) {
 		case '+':
 			return val1 + val2;
-		// do other operators later
+		// Imagine other operators here
 	}
 }
 
@@ -180,6 +180,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MTM0NjMzLDEzNjI0NjgyOTAsLTQwNj
-Y4OTE0OSwyMTAwMTEzNjg3LDg4MTI3NTA1OF19
+eyJoaXN0b3J5IjpbLTk2Njk3MTUyMiwxMzYyNDY4MjkwLC00MD
+Y2ODkxNDksMjEwMDExMzY4Nyw4ODEyNzUwNThdfQ==
 -->
