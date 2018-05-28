@@ -37,7 +37,7 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 
 ### A valid use case for Safe Eval:
 
-User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She sle
+User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She select
 
 ```js
 function (numberPreviousItemsPurchased, price) {
@@ -180,6 +180,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDU4ODE3MywtMTk1NTc3ODMyOSwtMT
-gyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
+eyJoaXN0b3J5IjpbLTE1MjYxMzc4NDMsLTExNDU4ODE3MywtMT
+k1NTc3ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5
+NDAwXX0=
 -->
