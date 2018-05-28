@@ -81,7 +81,8 @@ function interpolate(formula, dependentKeys, dataStore){
 		return acc;
 	}, formula);
 };
-interpolate("price
+interpolate("price * .99", ["price"], { price: "100" });
+// returns "100 * .99"
 ```
 Calculation looks like this:
 ```js
@@ -177,6 +178,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMDU5OTU3LC00MDY2ODkxNDksMjEwMD
+eyJoaXN0b3J5IjpbNTA1NzEwMzcwLC00MDY2ODkxNDksMjEwMD
 ExMzY4Nyw4ODEyNzUwNThdfQ==
 -->
