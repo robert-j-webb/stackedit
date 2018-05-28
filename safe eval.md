@@ -2,6 +2,8 @@
 >“Eval is only one letter away from evil.”
 
 — Js developers
+
+
 >“Do not ever use `eval`!"
 
 — MDN page on eval
@@ -11,7 +13,7 @@ Eval is the universally shunned function of the JavaScript standard library. Fol
 ### Introducing Safe Eval
  Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  It's designed to only permit pure, no side effect algorithms that have to halt. It is designed to not permit any XSS exploits. These characters are:
 ```js
-[0-9.()] [+-/*] [><=!] [&|] [?:]
+[?:] [0-9.()] [+-/*] [><=!&|]
 ```
 
 ### Let’s evaluate what’s allowed with this set of characters:
@@ -24,7 +26,7 @@ By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any alg
 
 0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them.
 
-### ```[><=! &|]``` Boolean Expressions
+### ```[><=!&|]``` Boolean Expressions
 
 By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressions.
 
@@ -218,6 +220,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjY0MjIxMCwxNDk4NjUyMzM5LC04OT
-kzMTA0NTIsLTEwOTg4MzMyMDddfQ==
+eyJoaXN0b3J5IjpbLTIxMDYwMTk5NDQsMTMxMjY0MjIxMCwxND
+k4NjUyMzM5LC04OTkzMTA0NTIsLTEwOTg4MzMyMDddfQ==
 -->
