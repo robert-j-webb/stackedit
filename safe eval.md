@@ -2,9 +2,9 @@
 >“Eval is only one letter away from evil.”
 
 — Js developers
->“Eval is only to be used for loading code, nothing else.”
+>“Do not ever use `eval`!"
 
-— JavaScript style standards
+— MDN page on eval
 
 Eval is the universally shunned function of the JavaScript standard library 
 
@@ -176,6 +176,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcwNjMxMzkxLDIxMDAxMTM2ODcsODgxMj
-c1MDU4XX0=
+eyJoaXN0b3J5IjpbLTE0MjkyMTA3ODYsMjEwMDExMzY4Nyw4OD
+EyNzUwNThdfQ==
 -->
