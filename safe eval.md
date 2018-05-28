@@ -126,17 +126,18 @@ function  lex(raw) {
 			stack.push({type: 'number', val: symbol});
 			return;
 		}
-		if(/[a-z]*/.test(symbol)) {
-			stack.push({type: 'variable
-		
+		if(/[a-zA-Z]*/.test(symbol)) {
+			stack.push({type: 'variable', val: symbol});
+			return;
+		}
 	});
 	return { type: 'program', val: lexed };
 }
-console.log(lex('5 5 +'));
+console.log(lex('price 5 +'));
 {
 	type: 'program',
 	val: [
-		{ type: 'number', val: 5 },
+		{ type: 'variable', val: 'price' },
 		{ type: 'number', val: 5 },
 		{ type: 'operator', val: '+' }
 	]
@@ -144,7 +145,7 @@ console.log(lex('5 5 +'));
 ```
 Then we create a calculator that gets the numeric value by recursing through the tree.
 ```js
-function calculate(expression, stack) {
+function calculate(expression, stack, dataStore) {
 	let val = 0;
 	switch (expression.type) {
 		case 'program':
@@ -155,6 +156,7 @@ function calculate(expression, stack) {
 			return val;
 		case 'operator':
 			return val + handleOperator(stack, expression.val);
+		case 'variable':
 	}
 	return val;
 }
@@ -198,10 +200,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc5MTc5MTM5LDcwMjYzMTIxMiwtMTYyNz
-I5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIz
-NywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC
-0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2
-NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4Mj
-E2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbMTQ4OTM0NzEyOCw1NzkxNzkxMzksLTE2Mj
+cyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcy
+MzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNy
+wtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0x
+NjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4MzI5LC0xOD
+IxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
 -->
