@@ -37,7 +37,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
-So Safe Eval is safe! You can confidently 
+So Safe Eval is safe! You can confidently run code from users by reducing their set of JS to a smal
 
 You might be thinking at this point:
 >Well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
@@ -222,7 +222,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDEwNzUyODksMTYwNTQ5MzAxMSwtMj
-EwNjAxOTk0NCwxMzEyNjQyMjEwLDE0OTg2NTIzMzksLTg5OTMx
-MDQ1MiwtMTA5ODgzMzIwN119
+eyJoaXN0b3J5IjpbLTEwODAxMzYxMjgsLTEyNDEwNzUyODksMT
+YwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEyNjQyMjEwLDE0OTg2
+NTIzMzksLTg5OTMxMDQ1MiwtMTA5ODgzMzIwN119
 -->
