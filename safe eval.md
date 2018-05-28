@@ -111,13 +111,16 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-First we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and single digit numbers becausFirst we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function lex(raw){
+	const stack = [];
 	return [...raw].map(char => {
 		if(/[+]/.test(char)){
-			
+			return [stack.pop(), stack.pop(), { type: 'operator', val: '+'];
+		}
+		
 	});
 }
 ```
@@ -188,8 +191,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjU2MDczODAsLTI2Mzc0NTUwNywtMT
-A2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcx
-ODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4MzI5LC0xODIxNj
-AzMzYsLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
+eyJoaXN0b3J5IjpbLTI1OTQwODkyNiwtMTgyNTYwNzM4MCwtMj
+YzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5
+NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3Nz
+gzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
+
 -->
