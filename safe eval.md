@@ -111,7 +111,7 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-My calculator will only support addition and will assume that input is in prefix, because that.  First we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and will assume that input is in prefix, because thi.  First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function  lex(raw) {
@@ -193,10 +193,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxOTE3Njc4OSw3OTAxNjk0NTksLTk2OT
-EyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYw
-NzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNz
-IsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMs
-LTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMj
-g0OTQwMF19
+eyJoaXN0b3J5IjpbLTE2MjcyOTczMTksLTQxOTE3Njc4OSw3OT
+AxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3
+Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MD
+I3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMs
+LTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOT
+Y5NTM1NDg3LDIxMjg0OTQwMF19
 -->
