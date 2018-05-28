@@ -8,7 +8,7 @@
 
 — MDN page on eval
 
-Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
+Eval is the universally shunned function of the JS standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
  
 ### Introducing Safe Eval
  Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  It's designed to only permit pure, no side effect algorithms that have to halt. It is designed to not permit any XSS exploits. These characters are:
@@ -24,7 +24,7 @@ By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any alg
 
 ### ```[0-9 . (.+) +-/*]``` Arithmetic
 
-0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `.+` means there needs to be at least one character inbetween the parenthesis to avoid function calls.
+0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `.+` means there needs to be at least one character in-between the parenthesis to avoid function calls.
 
 ### ```[><=!&|]``` Boolean Expressions
 
@@ -37,7 +37,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
-So Safe Eval is safe! You can confidently run code from users by reducing their set of JS to a smaller one.
+So Safe Eval is safe! You can confidently run code from users by restrictin their set of JS to a small, purely mathematical instruction set.
 
 You might be thinking at this point:
 >Well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
@@ -197,7 +197,7 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
-The fact is, using `eval` instead of writing a lexer/calculator is a much better option for multiple reasons. Implementing a lexer/calculator is about as difficult as implementing a reduced set of JavaScript in JavaScript.
+The fact is, using `eval` instead of writing a lexer/calculator is a much better option for multiple reasons. Implementing a lexer/calculator is about as difficult as implementing a reduced set of JS in JS.
 
 ### On Code quality
 
@@ -219,11 +219,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Summary
 
-Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDUzNjM3MjcsLTEwODAxMzYxMjgsLT
-EyNDEwNzUyODksMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEy
-NjQyMjEwLDE0OTg2NTIzMzksLTg5OTMxMDQ1MiwtMTA5ODgzMz
-IwN119
+eyJoaXN0b3J5IjpbMzQwODA2OTQyLC0xMDQ1MzYzNzI3LC0xMj
+QxMDc1Mjg5LDE2MDU0OTMwMTEsLTIxMDYwMTk5NDQsMTMxMjY0
+MjIxMCwxNDk4NjUyMzM5LC04OTkzMTA0NTIsLTEwOTg4MzMyMD
+ddfQ==
 -->
