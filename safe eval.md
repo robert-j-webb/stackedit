@@ -38,9 +38,10 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 ### A valid use case for Safe Eval:
 
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
-|Create a Discount|  |
+|| Create a Discount |
 |--|--|
-| Variables |price, numberPreviousItemsPurchased, affinityForCats, is  |
+| Variables |price, numberPreviousItemsPurchased, affinityForCats, isActuallyARobot |
+|Formula|e |
 
 #### (Advanced!) Create a discount:
 
@@ -180,7 +181,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzQ4NDk3NTgsLTE2NzE4NzQ3MTMsLT
-E1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5
-NTM1NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbMTY2NjM4NjMsLTE2NzE4NzQ3MTMsLTE1Mj
+YxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1
+NDg3LDIxMjg0OTQwMF19
 -->
