@@ -33,7 +33,7 @@ You might be thinking at this point:
 
 Arithmetic eval is actually the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
 
->What! Why would you ever need to do that! You're writing crazy code!
+>What! Why would you ever need to do that! There's no valid use case for this!
 
 Just wait a second, let me explain my use case.
 
@@ -180,7 +180,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDY0MjMwNiwtOTY2OTcxNTIyLDEzNj
-I0NjgyOTAsLTQwNjY4OTE0OSwyMTAwMTEzNjg3LDg4MTI3NTA1
-OF19
+eyJoaXN0b3J5IjpbLTQxOTE1NTgsLTk2Njk3MTUyMiwxMzYyND
+Y4MjkwLC00MDY2ODkxNDksMjEwMDExMzY4Nyw4ODEyNzUwNThd
+fQ==
 -->
