@@ -115,7 +115,7 @@ First we have to build a lexer for the calculator so we can operate symbolically
 ```js
 //lexer.js
 function lex(raw){
-	return [...raw].map(char => {})
+	return [...raw].map(char => {});
 }
 ```
 ```js
@@ -185,8 +185,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODQ0NDk3MCwtMTA2MjMzODAyNywtOD
-AxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2
-MTM3ODQzLC0xOTU1Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNT
-Q4NywyMTI4NDk0MDBdfQ==
+eyJoaXN0b3J5IjpbLTI2Mzc0NTUwNywtNTQ4NDQ0OTcwLC0xMD
+YyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4
+NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MD
+MzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
 -->
