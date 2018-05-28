@@ -103,10 +103,10 @@ I think this is an amazing solution as far as giving your users flexibility and 
 ### Pros
 1.  Powers users will love this - they can tweak their formulas to their heart’s content. They can even create new ways of discounting that the developer didn’t think of!
 2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out the new promotion.
-3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation.
+3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation. 
 
 ### Cons
-1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see in real time how things are affected.
+1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see in r
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
 
@@ -180,7 +180,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxOTE1NTgsLTk2Njk3MTUyMiwxMzYyND
-Y4MjkwLC00MDY2ODkxNDksMjEwMDExMzY4Nyw4ODEyNzUwNThd
-fQ==
+eyJoaXN0b3J5IjpbLTY5NDEzNjI3NCwtOTY2OTcxNTIyLDEzNj
+I0NjgyOTAsLTQwNjY4OTE0OSwyMTAwMTEzNjg3LDg4MTI3NTA1
+OF19
 -->
