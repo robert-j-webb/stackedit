@@ -39,7 +39,7 @@ Just wait a second, let me explain my use case.
 
 ### Let’s consider a scenario like this:
 
-User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased, price`. Then, they are provided with this screen to enter their prices in:
+User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased, price`. Then, they are provided with this screen to enter their formula in.
 
 ```js
 function (numberPreviousItemsPurchased, price) {
@@ -48,13 +48,7 @@ function (numberPreviousItemsPurchased, price) {
 ```
 They fill in the field like so:
 ```js
-price  <  100
-	?  0
-	:  price  -
-	   price  *
-		(numberPreviousItemsPurchased  >  5
-			?  0.05
-			:  numberPreviousItemsPurchased  *  0.01);
+
 ```
 Which then gets saved to the backend like this:
 
@@ -177,6 +171,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzU3NjM5NDIsLTQwNjY4OTE0OSwyMT
-AwMTEzNjg3LDg4MTI3NTA1OF19
+eyJoaXN0b3J5IjpbMjAzOTM2OTAwMCwtNDA2Njg5MTQ5LDIxMD
+AxMTM2ODcsODgxMjc1MDU4XX0=
 -->
