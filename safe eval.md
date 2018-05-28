@@ -189,6 +189,8 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
+The fact is, using 
+
 ### On Code quality
 
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
@@ -212,5 +214,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTg4MzMyMDddfQ==
+eyJoaXN0b3J5IjpbLTExOTczMjQ3OTQsLTEwOTg4MzMyMDddfQ
+==
 -->
