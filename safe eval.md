@@ -67,7 +67,7 @@ numberPreviousItemsPurchased  *  0.01”,
 ```
 They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
 
-Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything over 100 neopoints for 3%! 
+Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything for 3%! 
 ### How is this calculated?
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
 
@@ -76,11 +76,12 @@ Interpolation looks like this:
 ```js
 function interpolate(formula, dependentKeys, dataStore){
 	return dependKeys.reduce((acc, key) => {
-		let value = dataStore.get(key); //Lookup the variable
+		let value = dataStore[key]; //Lookup the variable
 		acc.replace(Regexp(key, 'g'), value); //Replace all occurrences of the string with the value of the variable
 		return acc;
 	}, formula);
 };
+interpolate("price
 ```
 Calculation looks like this:
 ```js
@@ -176,6 +177,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzY0NjQ2MjgsLTQwNjY4OTE0OSwyMT
-AwMTEzNjg3LDg4MTI3NTA1OF19
+eyJoaXN0b3J5IjpbMTQyMDU5OTU3LC00MDY2ODkxNDksMjEwMD
+ExMzY4Nyw4ODEyNzUwNThdfQ==
 -->
