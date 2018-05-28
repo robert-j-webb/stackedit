@@ -178,7 +178,10 @@ Tests should stop it from breaking. Basically just by reproducing each possible 
 
 Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend not merging PRs that fail to pass eslint as a rule.
 
+### Summary
+
+I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyODQ5NDAwXX0=
+eyJoaXN0b3J5IjpbLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
 -->
