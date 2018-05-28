@@ -131,18 +131,15 @@ function  lex(raw) {
 			return;
 		}
 	});
-	return { type: 'program', val: lexed };
+	return lexed;
 }
 let parsedFormula = lex('price 5 +');
 console.log(parsedFormula);
-{
-	type: 'program',
-	val: [
-		{ type: 'number', val: 5 },
-		{ type: 'variable', val: 'price' },
-		{ type: 'operator', val: '+' }
-	]
-};
+[
+	{ type: 'number', val: 5 },
+	{ type: 'variable', val: 'price' },
+	{ type: 'operator', val: '+' }
+]
 ```
 Then we create a calculator that gets the numeric value by recursing through the tree.
 ```js
@@ -199,11 +196,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NzUzMzAzMywxNDM1MDI0MDI5LDc3ND
-YzNDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkx
-MzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLT
-IxMTE5NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2
-Mzc0NTUwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOT
-czNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4
-MzI5LC0xODIxNjAzMzZdfQ==
+eyJoaXN0b3J5IjpbLTE3Njk1OTUyNjgsMTQzNTAyNDAyOSw3Nz
+Q2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5
+MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC
+0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0y
+NjM3NDU1MDcsLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMTk4MD
+k3MzcyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3
+ODMyOSwtMTgyMTYwMzM2XX0=
 -->
