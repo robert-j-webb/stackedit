@@ -41,7 +41,7 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 || Create a Discount |
 |--|--|
 | Variables |price, numberPreviousItemsPurchased, affinityForCats, isActuallyARobot |
-|Formula|e |
+|Formula|e ** |
 
 #### (Advanced!) Create a discount:
 
@@ -181,7 +181,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NjM4NjMsLTE2NzE4NzQ3MTMsLTE1Mj
-YxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1
-NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbLTE5ODA5NzM3MjksMTY2NjM4NjMsLTE2Nz
+E4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2
+MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
 -->
