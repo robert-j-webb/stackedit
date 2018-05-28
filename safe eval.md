@@ -114,7 +114,9 @@ At this point, you may be thinking,
 First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
-function lex(
+function lex(raw){
+	return [...raw].map(char => {})
+}
 ```
 ```js
 let originalFormula = '5 + 5';
@@ -183,8 +185,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyODEwOTEzLC0xMDYyMzM4MDI3LC04MD
-E1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYx
-Mzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1ND
-g3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbLTU0ODQ0NDk3MCwtMTA2MjMzODAyNywtOD
+AxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2
+MTM3ODQzLC0xOTU1Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNT
+Q4NywyMTI4NDk0MDBdfQ==
 -->
