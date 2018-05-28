@@ -39,7 +39,7 @@ Just wait a second, let me explain my use case.
 
 ### Let’s consider a scenario like this:
 
-User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased.` Then, they are provided with this screen to enter their prices in:
+User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased, price`. Then, they are provided with this screen to enter their prices in:
 
 ```js
 function (numberPreviousItemsPurchased, price) {
@@ -177,6 +177,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg5MjAzNjM1LC00MDY2ODkxNDksMjEwMD
-ExMzY4Nyw4ODEyNzUwNThdfQ==
+eyJoaXN0b3J5IjpbLTEwMzU3NjM5NDIsLTQwNjY4OTE0OSwyMT
+AwMTEzNjg3LDg4MTI3NTA1OF19
 -->
