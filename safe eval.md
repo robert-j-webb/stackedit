@@ -169,8 +169,6 @@ function  handleOperator(stack, val) {
       return  parseInt(stack.pop())  +  parseInt(stack.pop());
   }
 }
- calculate(parsedFormula, [], { price: 5 }); // 10
-
 calculate(parsedFormula, [], { price: 5 }); // 10
 ```
 
@@ -203,11 +201,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzNjU2NzgxLC0xODIwMDk2OTEzLC0yNj
-EwMzY0ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3
-NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgzNSwxND
-M1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkxNSwtMTk1OTQ2
-ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC
-05NjkxMjc1NDQsLTIxMTE5NTcyMzcsLTE0NDg0Nzc3ODUsLTE4
-MjU2MDczODBdfQ==
+eyJoaXN0b3J5IjpbLTM3MTM4MDc0OSwtMTgyMDA5NjkxMywtMj
+YxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNCwxMTUyMDgz
+NzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMT
+QzNTAyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0
+Njg0NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OS
+wtOTY5MTI3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0x
+ODI1NjA3MzgwXX0=
 -->
