@@ -173,7 +173,7 @@ function handleOperator(stack, val) {
 	}
 }
 
-calculate(parsedFormula, [], { price: 5 })
+calculate(parsedFormula, [], { price: 5 }); // 10
 ```
 
 ### This is really complicated!
@@ -203,7 +203,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDgxMTg5MTUsNzY3NzkzODU2LC0xOT
+eyJoaXN0b3J5IjpbNzc0NjM0NzQ3LC0xNTA4MTE4OTE1LC0xOT
 U5NDY4NDUzLDU3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0
 NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NS
 wtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04
