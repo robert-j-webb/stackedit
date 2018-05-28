@@ -188,11 +188,9 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe is t
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
-
-
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-I agree that this could be difficult. However, if the project is well maintained and doesn't grow in feature size too much, then it should be capable of stopping bugs 
+Tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
@@ -203,7 +201,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjA4Mzc2MCwtMTQ1MTY1MzY3NCwxMz
+eyJoaXN0b3J5IjpbLTE2NjY2OTkwNjIsMTE1MjA4Mzc2MCwxMz
 g2MzczMDA5LDc4NTM0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQw
 MjksNzc0NjM0NzQ3LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLD
 U3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEy
