@@ -35,11 +35,9 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 
 >What! Why would you ever need to do that! There's no valid use case for this!
 
-Just wait a second, let me explain my use case.
+### A valid use case for Safe Eval:
 
-### Let’s consider a scenario like this:
-
-User Marsha is making a shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased, price`. Then, they are provided with this screen to enter their formula in.
+User Marsha is editing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. They go into their shop editor and they select, `add a discount to all products.` Then, rather than selecting a flat rate like just 1%, they instead indicate they want to use a formula. Then, from a list of variables, they select `number of previous items purchased, price`. Then, they are provided with this screen to enter their formula in.
 
 ```js
 function (numberPreviousItemsPurchased, price) {
@@ -183,5 +181,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
+eyJoaXN0b3J5IjpbLTg2MTUzODEwLC05Njk1MzU0ODcsMjEyOD
+Q5NDAwXX0=
 -->
