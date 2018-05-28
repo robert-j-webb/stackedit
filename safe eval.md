@@ -158,12 +158,12 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we ]do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server and then injected into the DOM.
 
-If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs test, it will need to be battle hardened and it will need to be an open source project that people can trust.
+If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
 >"But even if you did have an open source
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2NDA2NjQxLDI0NDg2NTcxMCwtNzk2MD
-AxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2OSwtMTk3OTY5Mzcy
-LC0yMDIxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbLTQ4NTYzMzUzNiwyNDQ4NjU3MTAsLTc5Nj
+AwMTczMSwtMzU4NDA2NjU5LDE5MzQ3NzQ1NjksLTE5Nzk2OTM3
+MiwtMjAyMTg4MzExNl19
 -->
