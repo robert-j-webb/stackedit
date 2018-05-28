@@ -43,9 +43,10 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 | Variables |price, numberPreviousItemsPurchased, affinityForCats, isActuallyARobot |
 |Formula|e ^(i * pi) + 1 === 0|
 
-They fill in the field like so:
+They select price and numberPreviousItemsPurchased as their variables.
+They fill in the Formula field like so:
 ```js
-Formula = price  -
+price  -
 price  *
 	(numberPreviousItemsPurchased  >  5) ?
 		0.05 :
@@ -60,8 +61,6 @@ numberPreviousItemsPurchased  *  0.01”,
 	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’]
 }
 ```
-They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
-
 Then, after the store updates, a returning user visits the site. Ed has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything for 3%! 
 ### How is this calculated?
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
@@ -178,7 +177,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4OTY0NTQ2NCwtMTk4MDk3MzcyOSwtMT
+eyJoaXN0b3J5IjpbMTA0Nzg5NDQzMSwtMTk4MDk3MzcyOSwtMT
 Y3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMTgy
 MTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
 -->
