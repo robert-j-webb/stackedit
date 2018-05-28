@@ -195,7 +195,7 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
-Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server and then injected into the DOM.
+Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you render it. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
@@ -212,11 +212,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQ1NjQ3MTksLTE2NDcxNTc4MTAsOD
-kwODYzODQ3LC0yMTg3MTI4MDcsMTEyNzkyMjgwNSwtMTgyMDA5
-NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNC
-wxMTUyMDgzNzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgw
-Mjc4MzUsMTQzNTAyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MT
-UsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5
-MDE2OTQ1OV19
+eyJoaXN0b3J5IjpbLTEwOTg4MzMyMDcsLTExNjQ1NjQ3MTksLT
+E2NDcxNTc4MTAsODkwODYzODQ3LC0yMTg3MTI4MDcsMTEyNzky
+MjgwNSwtMTgyMDA5NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1Nj
+YsLTY5Njg5NDEwNCwxMTUyMDgzNzYwLDEzODYzNzMwMDksNzg1
+MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAyOSw3NzQ2MzQ3ND
+csLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC0x
+NjI3Mjk3MzE5XX0=
 -->
