@@ -13,16 +13,23 @@ Eval is the universally shunned function of the JavaScript standard library. Fol
 ```js
 [0-9.()] [+-/*] [><=!] [&|] [?:]
 ```
+
 ### Let’s evaluate what’s allowed with this set of characters:
+
 ### ```[?:]``` Ternary expressions
+
 By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any algorithm without iteration or recursion in it. 
+
 ### ```[0-9 . () +-/*]``` Arithmetic
+
 0-9 and arithmetic operators allow us to make formulas and expressions that are arithmetic, like describing a distance or a range. 
+
 ### ```[><=! &|]``` Boolean Expressions
 
 By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressions.
 
 ### Let’s evaluate what this can’t do:
+
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
 2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
@@ -201,11 +208,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODcxMjgwNywxMTI3OTIyODA1LC0xOD
-IwMDk2OTEzLC0yNjEwMzY0ODUsLTI5NDk2OTU2NiwtNjk2ODk0
-MTA0LDExNTIwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMT
-AyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODEx
-ODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMT
-ksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcyMzcsLTE0
-NDg0Nzc3ODVdfQ==
+eyJoaXN0b3J5IjpbLTE5MTc3MzY5ODksLTIxODcxMjgwNywxMT
+I3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0ODUsLTI5NDk2
+OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMTM4NjM3MzAwOS
+w3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYz
+NDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMz
+ksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIx
+MTE5NTcyMzddfQ==
 -->
