@@ -149,7 +149,7 @@ function calculate(expression, stack, dataStore) {
 	let val = 0;
 	switch (expression.type) {
 		case 'program':
-			return expression.val.reduce((sum, exp) => sum + calculate(exp, stack), val);
+			return expression.val.reduce((sum, exp) => sum + calculate(exp, stack, dataStore), val);
 		break;
 		case 'number':
 			stack.push(expression.val);
@@ -157,6 +157,8 @@ function calculate(expression, stack, dataStore) {
 		case 'operator':
 			return val + handleOperator(stack, expression.val);
 		case 'variable':
+			stack.push(dataStore.get(expression.val));
+			return val;
 	}
 	return val;
 }
@@ -200,10 +202,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTM0NzEyOCw1NzkxNzkxMzksLTE2Mj
-cyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcy
-MzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNy
-wtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0x
-NjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4MzI5LC0xOD
-IxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
+eyJoaXN0b3J5IjpbLTEzNDYzMjg5NDQsNTc5MTc5MTM5LC0xNj
+I3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC0yMTExOTU3
+MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0yNjM3NDU1MD
+csLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMTk4MDk3MzcyOSwt
+MTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMT
+gyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
 -->
