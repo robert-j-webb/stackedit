@@ -48,7 +48,7 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 || Create a Discount |
 |--|--|
 | Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
-|Formula (<text>|*e ^(i * pi) + 1 === 0*|
+|Formula (\<text>)|*e ^(i * pi) + 1 === 0*|
 
 They select price and numberPreviousItemsPurchased as their variables.
 They fill in the Formula field like so:
@@ -68,7 +68,7 @@ numberPreviousItemsPurchased  *  0.01”,
 	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’]
 }
 ```
-Then, after the store updates, a returning user visits the site. Ed, who has bought 3 ties from the store previously, has a previousItemsPurchased value of 3. When Ed looks at prices, they see a discount on everything for 3%! 
+Then, after the store updates, a returning user visits the site. Ed, who has bought 3 golden pet eggs from the store previously, has a previousItemsPurchased value of 3. When Ed looks at prices, they see a discount on everything for 3%! 
 
 ### How is this calculated?
 
@@ -208,7 +208,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMTc1ODI4Nyw4OTA4NjM4NDcsLTIxOD
+eyJoaXN0b3J5IjpbMTE1NTAzMjM3Myw4OTA4NjM4NDcsLTIxOD
 cxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2OTEzLC0yNjEwMzY0
 ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LDExNTIwODM3NjAsMT
 M4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0
