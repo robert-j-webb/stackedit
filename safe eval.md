@@ -37,7 +37,7 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 
 ### A valid use case for Safe Eval:
 
-User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. Marsha wants to add a discount of 1% for every item the customer has purchased, up to 5% off. Marsha happens to know some j
+User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. Marsha wants to add a discount of 1% for every item the customer has purchased, up to 5% off. 
 
 ```js
 function (numberPreviousItemsPurchased, price) {
@@ -56,7 +56,6 @@ Which then gets saved to the backend like this:
 
 ```js
 {
-	//The spaces would be stripped here, but it makes it less readable
 	formula: “price  - price  * (numberPreviousItemsPurchased  >  5) ? 0.05 :
 numberPreviousItemsPurchased  *  0.01”,
 	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’],
@@ -181,6 +180,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjE2MDMzNiwxMDA1MjIwMjk2LC05Nj
-k1MzU0ODcsMjEyODQ5NDAwXX0=
+eyJoaXN0b3J5IjpbLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOT
+Y5NTM1NDg3LDIxMjg0OTQwMF19
 -->
