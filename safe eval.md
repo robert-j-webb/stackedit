@@ -174,7 +174,7 @@ calculate(parsedFormula, [], { price: 5 }); // 10
 
 ### This is really complicated!
 
-This is very quickly becoming a huge pain for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be.
+This is very quickly becoming a huge pain for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. Imagine having to support . Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be.
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
@@ -201,11 +201,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3ND
-YzNDc0NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkx
-MzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLT
-IxMTE5NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2
-Mzc0NTUwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOT
-czNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4
-MzI5LC0xODIxNjAzMzZdfQ==
+eyJoaXN0b3J5IjpbMTQ2NTEwNDExNiwxMDI4MDI3ODM1LDE0Mz
+UwMjQwMjksNzc0NjM0NzQ3LC0xNTA4MTE4OTE1LC0xOTU5NDY4
+NDUzLDU3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0NTksLT
+k2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgy
+NTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1Mj
+YyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4
+NDMsLTE5NTU3NzgzMjldfQ==
 -->
