@@ -6,7 +6,7 @@
 
 — MDN page on eval
 
-Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of safe eval.
+Eval is the universally shunned function of the JavaScript standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
  
 ### Introducing Safe Eval
  Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away. These characters are:
@@ -180,6 +180,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2Njk3MTUyMiwxMzYyNDY4MjkwLC00MD
-Y2ODkxNDksMjEwMDExMzY4Nyw4ODEyNzUwNThdfQ==
+eyJoaXN0b3J5IjpbLTc1MDY0MjMwNiwtOTY2OTcxNTIyLDEzNj
+I0NjgyOTAsLTQwNjY4OTE0OSwyMTAwMTEzNjg3LDg4MTI3NTA1
+OF19
 -->
