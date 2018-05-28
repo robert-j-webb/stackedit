@@ -198,10 +198,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Summary
 
-Eval is one of the most notorious functions in the JavaScript standard library as far as I know, however, I don't think that 
+Eval is one of the most notorious functions in the JavaScript standard library as far as I know, however, I don't think that means we should ban it to strange edge case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzExMTA1MCwtNjk2ODk0MTA0LDExNT
+eyJoaXN0b3J5IjpbMTg0NTE1NzIwOSwtNjk2ODk0MTA0LDExNT
 IwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAyNzgz
 NSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkxNSwtMT
 k1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5
