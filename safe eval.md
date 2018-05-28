@@ -38,12 +38,11 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 ### A valid use case for Safe Eval:
 
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
+#### (Advanced!) Create a discount:
+|Variables  |  |
+|--|--|
+| Formula |  |
 
-```js
-function (numberPreviousItemsPurchased, price) {
-	// add your code here
-}
-```
 They fill in the field like so:
 ```js
 price  -
@@ -58,8 +57,7 @@ Which then gets saved to the backend like this:
 {
 	formula: “price  - price  * (numberPreviousItemsPurchased  >  5) ? 0.05 :
 numberPreviousItemsPurchased  *  0.01”,
-	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’],
-	type: ‘discount’
+	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’]
 }
 ```
 They submit. They then update the copy on their store to feature this loyalty program, so that they can bring in more returning users.
@@ -180,7 +178,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzQ3Njc4NiwtMTUyNjEzNzg0MywtMT
+eyJoaXN0b3J5IjpbMTEzMjY0MDgxOCwtMTUyNjEzNzg0MywtMT
 k1NTc3ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5
 NDAwXX0=
 -->
