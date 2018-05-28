@@ -111,7 +111,11 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-First we have to build a lexer for the calculator so we can operate symbolically. Let’s assume that the backend lexes for us, and it returns something like this for the formula:
+First we have to build a lexer for the calculator so we can operate symbolically.
+```js
+//lexer.js
+function lex(
+```
 ```js
 let originalFormula = '5 + 5';
 console.log(lex(originalFormula));
@@ -179,8 +183,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMT
-k4MDk3MzcyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1
-NTc3ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5ND
-AwXX0=
+eyJoaXN0b3J5IjpbNjQyODEwOTEzLC0xMDYyMzM4MDI3LC04MD
+E1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYx
+Mzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1ND
+g3LDIxMjg0OTQwMF19
 -->
