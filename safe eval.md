@@ -75,9 +75,9 @@ Interpolation looks like this:
 
 ```js
 function interpolate(formula, dependentKeys, dataStore){
-	return dependKeys.reduce((acc, key) => {
+	return dependentKeys.reduce((acc, key) => {
 		let value = dataStore[key]; //Lookup the variable
-		acc.replace(Regexp(key, 'g'), value); //Replace all occurrences of the string with the value of the variable
+		acc.replace(RegExp(key, 'g'), value); //Replace all occurrences of the string with the value of the variable
 		return acc;
 	}, formula);
 };
@@ -94,6 +94,7 @@ function safeEval(expression){
 		return null; //Rather than try to recover, just return.
 	}
 }
+safeEval("100 * .99"); //returns 99
 ```
 Also, change detection has to be implemented as well, such that if Ed buys a 4th item, the price would know to update. Most modern web frameworks feature some way of triggering recalculation of values if you update dependent keys, so I’ll leave that code out.
 
@@ -178,6 +179,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1NzEwMzcwLC00MDY2ODkxNDksMjEwMD
-ExMzY4Nyw4ODEyNzUwNThdfQ==
+eyJoaXN0b3J5IjpbMTM2MjQ2ODI5MCwtNDA2Njg5MTQ5LDIxMD
+AxMTM2ODcsODgxMjc1MDU4XX0=
 -->
