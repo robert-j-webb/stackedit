@@ -156,18 +156,20 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 ### Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
-Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we ]do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server and then injected into the DOM.
+Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server and then injected into the DOM.
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-I think that having tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
+Tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
 
+>"Eval encourages developers to use eval everywhere, and that's going to cause problems
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDEzNTY4MiwxMTAyNTE3NDMyLDI0ND
-g2NTcxMCwtNzk2MDAxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2
-OSwtMTk3OTY5MzcyLC0yMDIxODgzMTE2XX0=
+eyJoaXN0b3J5IjpbLTIwMTA0MDQ1NjMsMTExMDEzNTY4MiwxMT
+AyNTE3NDMyLDI0NDg2NTcxMCwtNzk2MDAxNzMxLC0zNTg0MDY2
+NTksMTkzNDc3NDU2OSwtMTk3OTY5MzcyLC0yMDIxODgzMTE2XX
+0=
 -->
