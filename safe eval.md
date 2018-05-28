@@ -111,7 +111,7 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-My calculator will only support addition and will assume that there are spaces between numbers and operators for simplicities sake.  First we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and will assume that input is in prefix, because that.  First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function  lex(raw) {
@@ -193,10 +193,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Nzk0NDE0LDc5MDE2OTQ1OSwtOTY5MT
-I3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3
-MzgwLC0yNjM3NDU1MDcsLTEwNjIzMzgwMjcsLTgwMTUyNjI3Mi
-wtMTk4MDk3MzcyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0Mywt
-MTk1NTc3ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyOD
-Q5NDAwXX0=
+eyJoaXN0b3J5IjpbLTQxOTE3Njc4OSw3OTAxNjk0NTksLTk2OT
+EyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYw
+NzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNz
+IsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMs
+LTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMj
+g0OTQwMF19
 -->
