@@ -192,7 +192,7 @@ If we can find a way to write a sanitizer for Markdown, then we can find a way t
 
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-Tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
+I agree that
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
@@ -203,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5ODE4NDg1MCwxMzg2MzczMDA5LDc4NT
-M0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0NzQ3
-LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOSwtMT
-YyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1
-NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NT
-A3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3Mjks
-LTE2NzE4NzQ3MTNdfQ==
+eyJoaXN0b3J5IjpbMTU0MjQ3MDE4NCwtNzk4MTg0ODUwLDEzOD
+YzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAy
+OSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNT
+c5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3
+NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3Mz
+gwLC0yNjM3NDU1MDcsLTEwNjIzMzgwMjcsLTgwMTUyNjI3Miwt
+MTk4MDk3MzcyOV19
 -->
