@@ -113,14 +113,14 @@ I think this is an amazing solution as far as giving your users flexibility and 
 ### Cons
 1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see if their promo will have unwanted consequences.
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
-3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
+3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply avoid slow loading stores. Additionally, slow loading stores can be pushed to the bottom of search results.
 
 At this point, you may be thinking,
 >“Well you don’t need eval to do that. You could do the exact same implementation using a calculator, and it wouldn't be so unsafe!"
 
 ### Ok, let’s build a calculator.
 
-My calculator will only support addition and will assume that input is in prefix, because this is an example.  First we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and will assume that input is in prefix, for simplicities sake.  First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function  lex(raw) {
@@ -210,7 +210,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzA2MDcyOTcsLTE2NDcxNTc4MTAsOD
+eyJoaXN0b3J5IjpbLTE3NTMwNjAwNzAsLTE2NDcxNTc4MTAsOD
 kwODYzODQ3LC0yMTg3MTI4MDcsMTEyNzkyMjgwNSwtMTgyMDA5
 NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNC
 wxMTUyMDgzNzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgw
