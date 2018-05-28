@@ -26,7 +26,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers.
 2.  Modify any variables! There’s no get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
-4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. Also, this makes the possible formula much more complicated, and therefore more difficult to debug.
+4.  Make a string, object, or array. Unfortunately, by allowing a quote, square bracket, or curly bracket, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
 You might be thinking at this point:
 >Well great, I guess it’s somewhat safe to run eval on a purely arithmetic expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
@@ -35,7 +35,7 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 
 >What! Why would you ever need to do that! You're writing crazy code!
 
-Just wait a second, let me explain a use case.
+Just wait a second, let me explain my use case.
 
 ### Let’s consider a scenario like this:
 
@@ -177,6 +177,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDM4NDAwNDcsLTQwNjY4OTE0OSwyMT
-AwMTEzNjg3LDg4MTI3NTA1OF19
+eyJoaXN0b3J5IjpbNjg5MjAzNjM1LC00MDY2ODkxNDksMjEwMD
+ExMzY4Nyw4ODEyNzUwNThdfQ==
 -->
