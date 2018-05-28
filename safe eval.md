@@ -62,7 +62,9 @@ numberPreviousItemsPurchased  *  0.01”,
 }
 ```
 Then, after the store updates, a returning user visits the site. Ed, who has bought 3 ties from the store previously, has a previousItemsPurchased value of 3. When Ed looks at prices, they see a discount on everything for 3%! 
+
 ### How is this calculated?
+
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
 
 Interpolation looks like this:
@@ -177,8 +179,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMzE2NTU5NCwtODAxNTI2MjcyLC0xOT
-gwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1
-Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0MD
-BdfQ==
+eyJoaXN0b3J5IjpbOTIyNzgzNzA2LC04MDE1MjYyNzIsLTE5OD
+A5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3
+NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF
+19
 -->
