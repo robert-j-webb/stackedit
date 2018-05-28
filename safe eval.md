@@ -164,8 +164,8 @@ function calculate(expression, stack, dataStore) {
 }
 
 function handleOperator(stack, val) {
-	const val1 = stack.pop();
-	const val2 = stack.pop();
+	const val1 = parseInt(stack.pop());
+	const val2 = parseInt(stack.pop());
 	switch (val) {
 		case '+':
 			return val1 + val2;
@@ -202,10 +202,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC0xNj
-I3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC0yMTExOTU3
-MjM3LC0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0yNjM3NDU1MD
-csLTEwNjIzMzgwMjcsLTgwMTUyNjI3MiwtMTk4MDk3MzcyOSwt
-MTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMT
-gyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX0=
+eyJoaXN0b3J5IjpbMTk0MDQyNzY0MywtMTk1OTQ2ODQ1Myw1Nz
+kxNzkxMzksLTE2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1
+NDQsLTIxMTE5NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczOD
+AsLTI2Mzc0NTUwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0x
+OTgwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOT
+U1Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0
+MDBdfQ==
 -->
