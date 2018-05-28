@@ -115,33 +115,35 @@ My calculator will only support addition and will assume that input is in prefix
 ```js
 //lexer.js
 function  lex(raw) {
-	const  stack  = [];
-	const  lexed  = [];
-	raw.split(' ').forEach(symbol => {
-		if  (/[+]/.test(symbol)) {
-			lexed.push(stack.pop(), stack.pop(), { type: 'operator', val: '+' });
-			return;
-		}
-		if  (/[0-9]+/.test(symbol)) {
-			stack.push({type: 'number', val: symbol});
-			return;
-		}
-		if(/[a-zA-Z]+/.test(symbol)) {
-			stack.push({type: 'variable', val: symbol});
-			return;
-		}
-	});
-	return { type: 'program', val: lexed };
+const  stack  = [];
+const  lexed  = [];
+raw.split('  ').forEach(symbol => {
+
+if  (/[+]/.test(symbol)) {
+
+lexed.push(tack.pop(), stack.pop(), { type: 'operator', val: '+' });
+return;
 }
-let parsedFormula = lex('price 5 +');
+if  (/[0-9]+/.test(symbol)) {
+stack.push({ type: 'number', val: symbol });
+return;
+}
+if  (/[a-zA-Z]+/.test(symbol)) {
+stack.push({ type: 'variable', val: symbol });
+return;
+}
+});
+return { type: 'program', val: lexed };
+}
+const  parsedFormula  =  lex('price 5 +');
 console.log(parsedFormula);
 {
-	type: 'program',
-	val: [
-		{ type: 'number', val: 5 },
-		{ type: 'variable', val: 'price' },
-		{ type: 'operator', val: '+' }
-	]
+type: 'program',
+val: [
+{ type: 'number', val: 5 },
+{ type: 'variable', val: 'price' },
+{ type: 'operator', val: '+' }
+]
 };
 ```
 Then we create a calculator that gets the numeric value by recursing through the tree.
@@ -201,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTM4MDc0OSwtMTgyMDA5NjkxMywtMj
-YxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNCwxMTUyMDgz
-NzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMT
-QzNTAyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0
-Njg0NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OS
-wtOTY5MTI3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0x
-ODI1NjA3MzgwXX0=
+eyJoaXN0b3J5IjpbOTcwNzAwNCwtMTgyMDA5NjkxMywtMjYxMD
+M2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNCwxMTUyMDgzNzYw
+LDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNT
+AyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0
+NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOT
+Y5MTI3NTQ0LC0yMTExOTU3MjM3LC0xNDQ4NDc3Nzg1LC0xODI1
+NjA3MzgwXX0=
 -->
