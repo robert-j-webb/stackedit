@@ -107,11 +107,11 @@ I think this is an amazing solution as far as giving your users flexibility and 
 
 ### Pros
 1.  Powers users will love this - they can tweak their formulas to their heart’s content. They can even create new ways of discounting that the developer didn’t think of!
-2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out whatev
-3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be reduced to dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation. 
+2.  To add functionality to it, the only thing the developer has to do is add more variables! Rather than having to make a complicated logic for each time that a new feature for more interesting promotions, they can add variables and let the user figure out whatever promotion they want.
+3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be transformed into dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation. 
 
 ### Cons
-1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see if their promo will have negative consequences.
+1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see if their promo will have unwanted consequences.
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply navigate back. Additionally, slow loading stores can be pushed to the bottom of search results.
 
@@ -210,11 +210,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDcxNTc4MTAsLTcwMjgwOTU1OSw4OT
-A4NjM4NDcsLTIxODcxMjgwNywxMTI3OTIyODA1LC0xODIwMDk2
-OTEzLC0yNjEwMzY0ODUsLTI5NDk2OTU2NiwtNjk2ODk0MTA0LD
-ExNTIwODM3NjAsMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyODAy
-NzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkxNS
-wtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNzkw
-MTY5NDU5XX0=
+eyJoaXN0b3J5IjpbLTE1NzA2MDcyOTcsLTE2NDcxNTc4MTAsOD
+kwODYzODQ3LC0yMTg3MTI4MDcsMTEyNzkyMjgwNSwtMTgyMDA5
+NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNC
+wxMTUyMDgzNzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgw
+Mjc4MzUsMTQzNTAyNDAyOSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MT
+UsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5
+MDE2OTQ1OV19
 -->
