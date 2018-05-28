@@ -117,15 +117,16 @@ My calculator will only support addition and will assume that there are spaces b
 function lex(raw){
 	const stack = [];
 	const lexed = [];
-	raw.split(' ').forEach(s => {
-		if(/[+]/.test(char)){
-			return [stack.pop(), stack.pop(), { type: 'operator', val: '+'];
+	raw.split(' ').forEach(symbol => {
+		if(/[+]/.test(symbol)){
+			lexed.push([stack.pop(), stack.pop(), { type: 'operator', val: '+']);
 		}
-		if(/[0-9]/.test(char)){
-			stack.push(char);
-		
-		
+		if(/[0-9]*/.test(symbol)){
+			stack.push(symbol);
+			return;
+		}
 	});
+	return { type: 'program', val: lexed };
 }
 ```
 ```js
@@ -195,9 +196,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE5NTcyMzcsLTE3NzEyMTM4MzIsLT
-E0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNywtMTA2
-MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcxOD
-c0NzEzLC0xNTI2MTM3ODQzLC0xOTU1Nzc4MzI5LC0xODIxNjAz
-MzYsLTk2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
+eyJoaXN0b3J5IjpbMTE0NDQ0OTAwOSwtMjExMTk1NzIzNywtMT
+Q0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYy
+MzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4Nz
+Q3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMz
+NiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
 -->
