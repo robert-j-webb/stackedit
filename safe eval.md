@@ -111,7 +111,7 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-My calculator will only support addition and will assume that input is in prefix, because thi.  First we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and will assume that input is in prefix, because this is an example.  First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function  lex(raw) {
@@ -138,7 +138,7 @@ console.log(lex('5 5 +'));
 	]
 };
 ```
-Then we create a reducer that gets the numeric value by recursing through the tree.
+Then we create a calculator that gets the numeric value by recursing through the tree.
 ```js
 function calculate(expression, stack) {
 	let val = 0;
@@ -161,13 +161,14 @@ function handleOperator(stack, val) {
 	switch (val) {
 		case '+':
 			return val1 + val2;
-		// Imagine other operators here
 	}
 }
 
 calculate(parsedFormula, []) === 10; //true
 ```
+
 ### This is really complicated!
+
 This is very quickly becoming a huge pain for me to write. I have to write complicated tests for this. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be.
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
@@ -193,10 +194,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjcyOTczMTksLTQxOTE3Njc4OSw3OT
-AxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3
-Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MD
-I3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMs
-LTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOT
-Y5NTM1NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbLTEzMjI2MTI2MTAsLTE2MjcyOTczMTksNz
+kwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcyMzcsLTE0NDg0
+Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNywtMTA2MjMzOD
+AyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcxODc0NzEz
+LC0xNTI2MTM3ODQzLC0xOTU1Nzc4MzI5LC0xODIxNjAzMzYsLT
+k2OTUzNTQ4NywyMTI4NDk0MDBdfQ==
 -->
