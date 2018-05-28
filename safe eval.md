@@ -190,7 +190,7 @@ If we can find a way to write a sanitizer for Markdown, then we can find a way t
 
 >"But even if you did have an open source project that was trusted, people would still break it accidentally.
 
-As long as maintainers don't permit forbidden characters, no XSS *should* be possible. Over time, maintainers may want to add features like `Math.*` and similar functions, but I don't think that
+As long as maintainers don't permit forbidden characters, no XSS *should* be possible. Over time, maintainers may want to permit features like `Math.*` and similar functions, but they
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
@@ -201,7 +201,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NTQwNTQwMiwxMTUyMDgzNzYwLDEzOD
+eyJoaXN0b3J5IjpbLTU3NzQwODg4MCwxMTUyMDgzNzYwLDEzOD
 YzNzMwMDksNzg1MzQzMDY1LDEwMjgwMjc4MzUsMTQzNTAyNDAy
 OSw3NzQ2MzQ3NDcsLTE1MDgxMTg5MTUsLTE5NTk0Njg0NTMsNT
 c5MTc5MTM5LC0xNjI3Mjk3MzE5LDc5MDE2OTQ1OSwtOTY5MTI3
