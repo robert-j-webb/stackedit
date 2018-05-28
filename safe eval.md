@@ -160,10 +160,10 @@ Here’s the thing that bothers me the most about calling ‘eval’ unsafe is t
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs test, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
->"But even if 
+>"But even if you did have an open source
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDUxNzQ0NTMsMjQ0ODY1NzEwLC03OT
-YwMDE3MzEsLTM1ODQwNjY1OSwxOTM0Nzc0NTY5LC0xOTc5Njkz
-NzIsLTIwMjE4ODMxMTZdfQ==
+eyJoaXN0b3J5IjpbMjk2NDA2NjQxLDI0NDg2NTcxMCwtNzk2MD
+AxNzMxLC0zNTg0MDY2NTksMTkzNDc3NDU2OSwtMTk3OTY5Mzcy
+LC0yMDIxODgzMTE2XX0=
 -->
