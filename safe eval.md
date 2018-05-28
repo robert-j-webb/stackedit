@@ -111,7 +111,7 @@ At this point, you may be thinking,
 
 ### Ok, let’s build a calculator.
 
-My calculator will only support addition and single digit numbers becausFirst we have to build a lexer for the calculator so we can operate symbolically.
+My calculator will only support addition and single digit numbers becauseFirst we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
 function lex(raw){
@@ -191,9 +191,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1OTQwODkyNiwtMTgyNTYwNzM4MCwtMj
-YzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5
-NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMzc4NDMsLTE5NTU3Nz
-gzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3LDIxMjg0OTQwMF19
-
+eyJoaXN0b3J5IjpbLTE0NDg0Nzc3ODUsLTI1OTQwODkyNiwtMT
+gyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04MDE1
+MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1MjYxMz
+c4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1NDg3
+LDIxMjg0OTQwMF19
 -->
