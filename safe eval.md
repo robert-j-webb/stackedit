@@ -144,6 +144,7 @@ function  lex(raw) {
 }
 const  parsedFormula  =  lex('price 5 +');
 console.log(parsedFormula);
+/* prints: 
 {
   type: 'program',
   val: [
@@ -151,7 +152,8 @@ console.log(parsedFormula);
     { type: 'variable', val: 'price' },
     { type: 'operator', val: '+' }
   ]
-};
+}
+*/
 ```
 Then we create a calculator that gets the numeric value by recursing through the tree.
 ```js
@@ -210,7 +212,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTMwNjAwNzAsLTE2NDcxNTc4MTAsOD
+eyJoaXN0b3J5IjpbLTExNjQ1NjQ3MTksLTE2NDcxNTc4MTAsOD
 kwODYzODQ3LC0yMTg3MTI4MDcsMTEyNzkyMjgwNSwtMTgyMDA5
 NjkxMywtMjYxMDM2NDg1LC0yOTQ5Njk1NjYsLTY5Njg5NDEwNC
 wxMTUyMDgzNzYwLDEzODYzNzMwMDksNzg1MzQzMDY1LDEwMjgw
