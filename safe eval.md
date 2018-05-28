@@ -51,14 +51,16 @@ They fill in the field like so:
 price  -
 price  *
 	(numberPreviousItemsPurchased  >  5) ?
-		0.05 : numberPreviousItemsPurchased  *  0.01;
+		0.05 :
+		numberPreviousItemsPurchased  *  0.01
 ```
 Which then gets saved to the backend like this:
 
 ```js
 {
 	//The spaces would be stripped here, but it makes it less readable
-	formula: “price<100 ? price : price - price * (numberPreviousItemsPurchased > 5 ? .05 : numberPreviousItemsPurchased * .01)”,
+	formula: “price  - price  * (numberPreviousItemsPurchased  >  5) ? 0.05 :
+numberPreviousItemsPurchased  *  0.01”,
 	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’],
 	type: ‘discount’
 }
@@ -174,6 +176,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDcxMTUyMywtNDA2Njg5MTQ5LDIxMD
-AxMTM2ODcsODgxMjc1MDU4XX0=
+eyJoaXN0b3J5IjpbLTE0MzY0NjQ2MjgsLTQwNjY4OTE0OSwyMT
+AwMTEzNjg3LDg4MTI3NTA1OF19
 -->
