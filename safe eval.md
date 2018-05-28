@@ -114,19 +114,32 @@ At this point, you may be thinking,
 My calculator will only support addition and will assume that there are spaces between numbers and operators for simplicities sake.  First we have to build a lexer for the calculator so we can operate symbolically.
 ```js
 //lexer.js
-function lex(raw){
-	const stack = [];
-	const lexed = [];
-	raw.split(' ').forEach(symbol => {
-		if(/[+]/.test(symbol)){
-			lexed.push([stack.pop(), stack.pop(), { type: 'operator', val: '+']);
-		}
-		if(/[0-9]*/.test(symbol)){
-			stack.push(symbol);
-			return;
-		}
-	});
-	return { type: 'program', val: lexed };
+function  lex(raw) {
+
+const  stack  = [];
+
+const  lexed  = [];
+
+raw.split('  ').forEach(symbol => {
+
+if  (/[+]/.test(symbol)) {
+
+lexed.push([stack.pop(), stack.pop(), { type: 'operator', val: '+' }]);
+
+}
+
+if  (/[0-9]*/.test(symbol)) {
+
+stack.push(symbol);
+
+return;
+
+}
+
+});
+
+return { type: 'program', val: lexed };
+
 }
 ```
 ```js
@@ -196,7 +209,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NDQ0OTAwOSwtMjExMTk1NzIzNywtMT
+eyJoaXN0b3J5IjpbLTg1MzQxNTU2MiwtMjExMTk1NzIzNywtMT
 Q0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYy
 MzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4Nz
 Q3MTMsLTE1MjYxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMz
