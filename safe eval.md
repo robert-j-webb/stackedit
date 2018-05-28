@@ -178,9 +178,11 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
+### Code quality
+
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
-### Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
+Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you serve it. Markdown, which this blog post is written in, is compiled to HTML, which is then sanitized by the server and then injected into the DOM.
 
@@ -201,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NjM3MzAwOSw3ODUzNDMwNjUsMTAyOD
-AyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0NywtMTUwODExODkx
-NSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLTE2MjcyOTczMTksNz
-kwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5NTcyMzcsLTE0NDg0
-Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NTUwNywtMTA2MjMzOD
-AyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5LC0xNjcxODc0NzEz
-LC0xNTI2MTM3ODQzXX0=
+eyJoaXN0b3J5IjpbLTE1MDExMTcwODcsMTM4NjM3MzAwOSw3OD
+UzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0
+NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLT
+E2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5
+NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NT
+UwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5
+LC0xNjcxODc0NzEzXX0=
 -->
