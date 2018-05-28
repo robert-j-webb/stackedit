@@ -6,7 +6,7 @@
 
 — JavaScript style standards
 
-JavaScript developers everywhere agree that eval is never to be used in production code because it’s unsafe, it’s hacky, and it can lead to unpredictable behavior that’s difficult to debug. I am not disputing that about eval, however, a safe eval could be made that has none of these problems. Safe eval is a wrapper around eval where only certain characters are allowed to be executed, the rest are thrown away. These characters are:
+JavaScript developers everywhere agree that eval is never to be used in production code because it’s unsafe, it’s hacky, and it can lead to unpredictable behavior that’s difficult to debug. I am not disputing that about eval, however, a safe eval could be made that has none of these problems. Safe eval is a wrapper around eval where only certain characters are allowed to be executed, \the rest are thrown away. These characters are:
 ```js
 [0-9.()] [+-/*] [><=!] [&|] [?:]
 ```
@@ -170,8 +170,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTk1NzM2NCwxMTEwMTM1NjgyLDExMD
-I1MTc0MzIsMjQ0ODY1NzEwLC03OTYwMDE3MzEsLTM1ODQwNjY1
-OSwxOTM0Nzc0NTY5LC0xOTc5NjkzNzIsLTIwMjE4ODMxMTZdfQ
-==
+eyJoaXN0b3J5IjpbLTIwODU1OTMyNjgsMTExMDEzNTY4MiwxMT
+AyNTE3NDMyLDI0NDg2NTcxMCwtNzk2MDAxNzMxLC0zNTg0MDY2
+NTksMTkzNDc3NDU2OSwtMTk3OTY5MzcyLC0yMDIxODgzMTE2XX
+0=
 -->
