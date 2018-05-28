@@ -40,8 +40,8 @@ Arithmetic eval is actually the second step of the function I’m proposing. The
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
 || Create a Discount |
 |--|--|
-| Variables |price, numberPreviousItemsPurchased, affinityForCats, isActuallyARobot |
-|Formula|e ^(i * pi) + 1 === 0|
+| Variables |`price`, `numberPreviousItemsPurchased`, `affinityForCats, isActuallyARobot |
+|Formula|**e ^(i * pi) + 1 === 0*|
 
 They select price and numberPreviousItemsPurchased as their variables.
 They fill in the Formula field like so:
@@ -61,7 +61,7 @@ numberPreviousItemsPurchased  *  0.01”,
 	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’]
 }
 ```
-Then, after the store updates, a returning user visits the site. Ed, w has bought 3 ties from the store previously, so their previousItemsPurchased is 3. When Ed looks at prices, they see a discount on everything for 3%! 
+Then, after the store updates, a returning user visits the site. Ed, who has bought 3 ties from the store previously, has a previousItemsPurchased value of 3. When Ed looks at prices, they see a discount on everything for 3%! 
 ### How is this calculated?
 When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables and calculates the resulting price.
 
@@ -177,8 +177,8 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMTUyNjI3MiwxMDQ3ODk0NDMxLC0xOT
-gwOTczNzI5LC0xNjcxODc0NzEzLC0xNTI2MTM3ODQzLC0xOTU1
-Nzc4MzI5LC0xODIxNjAzMzYsLTk2OTUzNTQ4NywyMTI4NDk0MD
-BdfQ==
+eyJoaXN0b3J5IjpbNDgzNTY0MjAsLTgwMTUyNjI3MiwtMTk4MD
+k3MzcyOSwtMTY3MTg3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3
+ODMyOSwtMTgyMTYwMzM2LC05Njk1MzU0ODcsMjEyODQ5NDAwXX
+0=
 -->
