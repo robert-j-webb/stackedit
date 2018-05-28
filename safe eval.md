@@ -154,12 +154,10 @@ function calculate(expression, stack, dataStore) {
 		break;
 		case 'number':
 			stack.push(expression.val);
-			return val;
 		case 'operator':
 			return val + handleOperator(stack, expression.val);
 		case 'variable':
 			stack.push(dataStore[expression.val]);
-			return val;
 	}
 	return val;
 }
@@ -203,11 +201,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0NjM0NzQ3LC0xNTA4MTE4OTE1LC0xOT
-U5NDY4NDUzLDU3OTE3OTEzOSwtMTYyNzI5NzMxOSw3OTAxNjk0
-NTksLTk2OTEyNzU0NCwtMjExMTk1NzIzNywtMTQ0ODQ3Nzc4NS
-wtMTgyNTYwNzM4MCwtMjYzNzQ1NTA3LC0xMDYyMzM4MDI3LC04
-MDE1MjYyNzIsLTE5ODA5NzM3MjksLTE2NzE4NzQ3MTMsLTE1Mj
-YxMzc4NDMsLTE5NTU3NzgzMjksLTE4MjE2MDMzNiwtOTY5NTM1
-NDg3LDIxMjg0OTQwMF19
+eyJoaXN0b3J5IjpbMTQzNTAyNDAyOSw3NzQ2MzQ3NDcsLTE1MD
+gxMTg5MTUsLTE5NTk0Njg0NTMsNTc5MTc5MTM5LC0xNjI3Mjk3
+MzE5LDc5MDE2OTQ1OSwtOTY5MTI3NTQ0LC0yMTExOTU3MjM3LC
+0xNDQ4NDc3Nzg1LC0xODI1NjA3MzgwLC0yNjM3NDU1MDcsLTEw
+NjIzMzgwMjcsLTgwMTUyNjI3MiwtMTk4MDk3MzcyOSwtMTY3MT
+g3NDcxMywtMTUyNjEzNzg0MywtMTk1NTc3ODMyOSwtMTgyMTYw
+MzM2LC05Njk1MzU0ODddfQ==
 -->
