@@ -22,9 +22,9 @@ Eval is the universally shunned function of the JavaScript standard library. Fol
 
 By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any algorithm without iteration or recursion in it. 
 
-### ```[0-9 . () +-/*]``` Arithmetic
+### ```[0-9 . (.+) +-/*]``` Arithmetic
 
-0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them.
+0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `.+` means there needs to be at least one character inbetween the parenthesis to avoid function calls.
 
 ### ```[><=!&|]``` Boolean Expressions
 
@@ -225,7 +225,7 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JavaScript standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMz
-EyNjQyMjEwLDE0OTg2NTIzMzksLTg5OTMxMDQ1MiwtMTA5ODgz
-MzIwN119
+eyJoaXN0b3J5IjpbMTcyMTQ3OTY5MSwxNjA1NDkzMDExLC0yMT
+A2MDE5OTQ0LDEzMTI2NDIyMTAsMTQ5ODY1MjMzOSwtODk5MzEw
+NDUyLC0xMDk4ODMzMjA3XX0=
 -->
