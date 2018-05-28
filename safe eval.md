@@ -77,8 +77,8 @@ Interpolation looks like this:
 function interpolate(formula, dependentKeys, dataStore){
 	return dependentKeys.reduce((acc, key) => {
 		let value = dataStore[key]; //Lookup the variable
-		acc.replace(RegExp(key, 'g'), value); //Replace all occurrences of the string with the value of the variable
-		return acc;
+		return acc.replace(RegExp(key, 'g'), value);
+		//Replace all occurrences of the string with the value of the variable
 	}, formula);
 };
 interpolate("price * .99", ["price"], { price: "100" });
@@ -179,6 +179,6 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MjQ2ODI5MCwtNDA2Njg5MTQ5LDIxMD
-AxMTM2ODcsODgxMjc1MDU4XX0=
+eyJoaXN0b3J5IjpbMTAzOTM3MjEyOCwxMzYyNDY4MjkwLC00MD
+Y2ODkxNDksMjEwMDExMzY4Nyw4ODEyNzUwNThdfQ==
 -->
