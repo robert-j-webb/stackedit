@@ -164,12 +164,13 @@ If we can find a way to write a sanitizer for Markdown, then we can find a way t
 
 Tests should stop it from breaking. Basically just by reproducing each possible XSS in it's own test for eval, you should be able to prevent future devs from accidentally causing XSS.
 
->"Eval encourages developers to use eval everywhere, and that's going to cause problems
+>"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
+
+Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTA0MDQ1NjMsMTExMDEzNTY4MiwxMT
-AyNTE3NDMyLDI0NDg2NTcxMCwtNzk2MDAxNzMxLC0zNTg0MDY2
-NTksMTkzNDc3NDU2OSwtMTk3OTY5MzcyLC0yMDIxODgzMTE2XX
-0=
+eyJoaXN0b3J5IjpbMjUzNTc2MjM1LDExMTAxMzU2ODIsMTEwMj
+UxNzQzMiwyNDQ4NjU3MTAsLTc5NjAwMTczMSwtMzU4NDA2NjU5
+LDE5MzQ3NzQ1NjksLTE5Nzk2OTM3MiwtMjAyMTg4MzExNl19
 -->
