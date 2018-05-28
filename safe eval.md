@@ -178,7 +178,7 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
-### Code quality
+### On Code quality
 
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
@@ -203,11 +203,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 I don't quite know what to say here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDExMTcwODcsMTM4NjM3MzAwOSw3OD
-UzNDMwNjUsMTAyODAyNzgzNSwxNDM1MDI0MDI5LDc3NDYzNDc0
-NywtMTUwODExODkxNSwtMTk1OTQ2ODQ1Myw1NzkxNzkxMzksLT
-E2MjcyOTczMTksNzkwMTY5NDU5LC05NjkxMjc1NDQsLTIxMTE5
-NTcyMzcsLTE0NDg0Nzc3ODUsLTE4MjU2MDczODAsLTI2Mzc0NT
-UwNywtMTA2MjMzODAyNywtODAxNTI2MjcyLC0xOTgwOTczNzI5
-LC0xNjcxODc0NzEzXX0=
+eyJoaXN0b3J5IjpbLTc5ODE4NDg1MCwxMzg2MzczMDA5LDc4NT
+M0MzA2NSwxMDI4MDI3ODM1LDE0MzUwMjQwMjksNzc0NjM0NzQ3
+LC0xNTA4MTE4OTE1LC0xOTU5NDY4NDUzLDU3OTE3OTEzOSwtMT
+YyNzI5NzMxOSw3OTAxNjk0NTksLTk2OTEyNzU0NCwtMjExMTk1
+NzIzNywtMTQ0ODQ3Nzc4NSwtMTgyNTYwNzM4MCwtMjYzNzQ1NT
+A3LC0xMDYyMzM4MDI3LC04MDE1MjYyNzIsLTE5ODA5NzM3Mjks
+LTE2NzE4NzQ3MTNdfQ==
 -->
