@@ -44,7 +44,7 @@ You might be thinking at this point:
 
 Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
->What! Why would you ever need to do that! There's no valid use case for this!
+>Why would you ever want that? The use case for that must be contrived.
 
 ### A valid use case for Interpolation into Safe Eval:
 
@@ -227,7 +227,7 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3NjQ3OTQwLDE1MzE5MTUyNzcsMTI3MD
+eyJoaXN0b3J5IjpbODM0OTQ3MTc3LDE1MzE5MTUyNzcsMTI3MD
 g0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2MSwtNjAwOTI2OTIw
 LC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NT
 Q4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0
