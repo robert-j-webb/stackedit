@@ -204,7 +204,7 @@ The fact is, using `eval` instead of writing a lexer/calculator is a much better
 
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
-Safe Eval needs to be in a library. It should not be easily modifiable or extensible. It needs to 
+Safe Eval needs to be in a library. It should not be easily modifiable or extensible. It needs to be well tested, as well battle hardened.
 Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you render it. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
@@ -224,11 +224,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3MTczOTI3LC0xNDMzNTcxMjY2LC00MT
-EzNjcxMTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMz
-NjcsLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC
-0xMTAzMjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEy
-NDEwNzUyODksMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEyNj
-QyMjEwLDE0OTg2NTIzMzksLTg5OTMxMDQ1MiwtMTA5ODgzMzIw
-N119
+eyJoaXN0b3J5IjpbMTU5NjQ4Njc0MiwzNzcxNzM5MjcsLTQxMT
+M2NzExNiw5Mzk1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2
+NywtMTc4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLT
+ExMDMyMjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0
+MTA3NTI4OSwxNjA1NDkzMDExLC0yMTA2MDE5OTQ0LDEzMTI2ND
+IyMTAsMTQ5ODY1MjMzOSwtODk5MzEwNDUyLC0xMDk4ODMzMjA3
+XX0=
 -->
