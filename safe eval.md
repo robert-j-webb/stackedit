@@ -199,7 +199,7 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 The fact is, using `eval` instead of writing a lexer/calculator is a much better option for both software engineering concerns, and performance. Implementing a lexer/calculator is about as difficult and slow as implementing a reduced set of JS in JS.
 
-### Counter arguments against code quality
+### Counterarguments against code quality
 
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
@@ -222,11 +222,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0ODczNDc3LDEyNzA4NDA2MjQsNTU1MT
-cwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjkyMCwtODY4NjY2Mzg3
-LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOTU0ODk5OSwtMTY3Mz
-IzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQxNDc5LC0zMzA4MzI1
-OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OCwxMzExODE5NDQ5LC
-0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2MDU0OTMwMTEsLTIx
-MDYwMTk5NDRdfQ==
+eyJoaXN0b3J5IjpbMTE3MDAwMjg2NywxMjcwODQwNjI0LDU1NT
+E3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4
+NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1NDg5OTksLTE2Nz
+MyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMy
+NTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OS
+wtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0y
+MTA2MDE5OTQ0XX0=
 -->
