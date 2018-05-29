@@ -96,7 +96,7 @@ Calculation looks like this:
 function safeEval(expression){
 	const toEval = expression.replace(/(\(\)|[^0-9.()+\-*\/><=!&|?:])+/g, ‘’);
 	// ^ Removes unsafe chars (including (), but not (5 + 5))
-	// See https://regex101.com/r/Pt82Gi/1 for examples.
+	// See https://regex101.com/r/Pt82Gi/2 for examples.
 	try {
 		return eval(toEval);
 	} catch(error) {
@@ -223,9 +223,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzMwMTk5MiwtMzMwODMyNTk2LDE0OT
-IxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0
-NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0yMTA2MDE5OT
-Q0LDEzMTI2NDIyMTAsMTQ5ODY1MjMzOSwtODk5MzEwNDUyLC0x
-MDk4ODMzMjA3XX0=
+eyJoaXN0b3J5IjpbLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxND
+kyMTQwMzc5LC0xMTAzMjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0
+NDc4MDcsLTEyNDEwNzUyODksMTYwNTQ5MzAxMSwtMjEwNjAxOT
+k0NCwxMzEyNjQyMjEwLDE0OTg2NTIzMzksLTg5OTMxMDQ1Miwt
+MTA5ODgzMzIwN119
 -->
