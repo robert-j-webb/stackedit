@@ -206,7 +206,7 @@ The fact is, using `eval` instead of writing a lexer/calculator is a much better
 
 Your junior (and senior) developers are writing XSS bugs right now, without using eval at all.
 
-Eval is unsafe, but so is writing to the DOM without unescaping. We know that it's dangerous, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and then it is rendered. Both of these inputs are sanitized, so we can feel safe about using them. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
+Eval is unsafe, but so is writing to the DOM without unescaping. We know that it's dangerous, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and then it is rendered. Both of these inputs are sanitized, so we can be sure that they won't cause a vulnerability. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
@@ -223,11 +223,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzgyODM2MSwtNjAwOTI2OTIwLC04Nj
-g2NjYzODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NTQ4OTk5
-LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0NzksLT
-MzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3MDQ4LDEzMTE4
-MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNzUyODksMTYwNTQ5Mz
-AxMSwtMjEwNjAxOTk0NCwxMzEyNjQyMjEwLDE0OTg2NTIzMzks
-LTg5OTMxMDQ1Ml19
+eyJoaXN0b3J5IjpbLTExODE4NDA4ODUsMTkwMzgyODM2MSwtNj
+AwOTI2OTIwLC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcx
+MTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLT
+E3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAz
+MjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNz
+UyODksMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEyNjQyMjEw
+LDE0OTg2NTIzMzldfQ==
 -->
