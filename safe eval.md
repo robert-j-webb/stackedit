@@ -39,9 +39,10 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, pure, mathematical instruction set.
 
 You might be thinking at this point:
+
 >Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
 
-Arithmetic eval is the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
+Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
 >What! Why would you ever need to do that! There's no valid use case for this!
 
@@ -198,11 +199,11 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
-The fact is, using `eval` instead of writing a lexer/calculator is a much better option for both software engineering concerns, and performance. Implementing a lexer/calculator is about as difficult and slow as implementing a reduced set of JS in JS.
+The fact is, using eval instead of writing a lexer/calculator is a much better option for both software engineering concerns, and performance. Implementing a lexer/calculator is about as difficult and slow as implementing a reduced set of JS in JS.
 
 ### Counterarguments against code quality
 
->"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
+>"Eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
 Your junior (and senior) developers are writing XSS bugs right now, without using eval at all.
 
@@ -226,11 +227,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjAxODUwNjUsMTUzMTkxNTI3NywxMj
-cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
-MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
-k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
-MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
-gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
-NjA1NDkzMDExXX0=
+eyJoaXN0b3J5IjpbNTg3NjQ3OTQwLDE1MzE5MTUyNzcsMTI3MD
+g0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2MSwtNjAwOTI2OTIw
+LC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NT
+Q4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0
+NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3MDQ4LD
+EzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNzUyODksMTYw
+NTQ5MzAxMV19
 -->
