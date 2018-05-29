@@ -216,18 +216,17 @@ As long as maintainers don't permit forbidden characters, no XSS *should* be pos
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
-Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend not merging PRs that fail to pass eslint as a rule.
-
+Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend setting up eslint and having a policy of not merging PRs that fail 
 ### Summary
 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODE4NDA4ODUsMTkwMzgyODM2MSwtNj
-AwOTI2OTIwLC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcx
-MTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLT
-E3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAz
-MjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNz
-UyODksMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEyNjQyMjEw
-LDE0OTg2NTIzMzldfQ==
+eyJoaXN0b3J5IjpbMTQzNDk2MTkwOSwxOTAzODI4MzYxLC02MD
+A5MjY5MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzEx
+Niw5Mzk1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMT
+c4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMy
+MjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NT
+I4OSwxNjA1NDkzMDExLC0yMTA2MDE5OTQ0LDEzMTI2NDIyMTAs
+MTQ5ODY1MjMzOV19
 -->
