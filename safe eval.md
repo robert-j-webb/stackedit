@@ -40,11 +40,11 @@ So Safe Eval is safe! You can confidently run code from users by restricting the
 
 You might be thinking at this point:
 
->Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
+>"Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?"
 
 Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
->Why would you ever want that? The use case for that must be contrived.
+>"Why would you ever want that? The use case for that must be contrived."
 
 ### A valid use case for Interpolation into Safe Eval:
 
@@ -122,7 +122,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply avoid slow loading stores. Additionally, slow loading stores can be pushed to the bottom of search results.
 
 At this point, you may be thinking,
->“Well you don’t need eval to do that. You could do the exact same implementation using a calculator, and it wouldn't be so unsafe!"
+>“Well you don’t need eval to do that. Rather than relying on an unsafe
 
 ### Ok, let’s build a calculator.
 
@@ -227,11 +227,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM0OTQ3MTc3LDE1MzE5MTUyNzcsMTI3MD
-g0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2MSwtNjAwOTI2OTIw
-LC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NT
-Q4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0
-NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3MDQ4LD
-EzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNzUyODksMTYw
-NTQ5MzAxMV19
+eyJoaXN0b3J5IjpbLTEzMzc2NjI3MDAsMTUzMTkxNTI3NywxMj
+cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
+MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
+k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
+MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
+gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
+NjA1NDkzMDExXX0=
 -->
