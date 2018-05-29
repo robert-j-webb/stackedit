@@ -3,7 +3,6 @@
 
 — Js developers
 
-
 >“Do not ever use `eval`!"
 
 — MDN page on eval
@@ -11,7 +10,7 @@
 Eval is the universally shunned function of the JS standard library. Folk programming logic tells us that any usage can be refactored away to code that doesn't rely on it, and that it should never be used on a source that you don't trust.  Even if you somehow find a use case that works and you sanitize the user input, it's said that by including eval in your code base, you will be encouraging future developers to use it for bad purposes. I'm going to attempt to refute these arguments by walking through my theoretical implementation of Safe Eval.
  
 ### Introducing Safe Eval
- Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  It's designed to only permit pure, no side effect algorithms that have to halt. It is designed to not permit any XSS exploits. These characters are:
+ Safe eval is a wrapper around eval where only certain characters are allowed to be executed and the rest are thrown away.  It's designed to only permit pure, no side effect algorithms that have to halt as well as no XSS. These characters are:
 ```js
 [?:] [0-9.()] [+-/*] [><=!&|]
 ```
@@ -223,11 +222,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQ3NzE1MiwxMjcwODQwNjI0LDU1NT
-E3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4
-NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1NDg5OTksLTE2Nz
-MyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMy
-NTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OS
-wtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0y
-MTA2MDE5OTQ0XX0=
+eyJoaXN0b3J5IjpbODQ2NTY3Mjk2LDEyNzA4NDA2MjQsNTU1MT
+cwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjkyMCwtODY4NjY2Mzg3
+LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOTU0ODk5OSwtMTY3Mz
+IzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQxNDc5LC0zMzA4MzI1
+OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OCwxMzExODE5NDQ5LC
+0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2MDU0OTMwMTEsLTIx
+MDYwMTk5NDRdfQ==
 -->
