@@ -115,6 +115,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 3.  For less experienced users, the developer can provide preset formulas and prices, and allow the user to fill in these widgets, which will be transformed into dynamic formulas by the client. Think ‘buy one get one free’ or ‘dollar off’ discount creation. 
 
 ### Cons
+
 1.  Users may accidentally make promotions that result in way more discount than they’re comfortable with. This can be mitigated by preventing users from uploading promotions that cause negative prices, or checking in with the user when their promotions pass a limit. However, one of the best mitigations for this is to have real time feedback on what the store will look like when a user is creating a promotion, so they can see if their promo will have unwanted consequences.
 2.  Customers might end up in scenarios where pricing is confusing to them. Imagine a power user who makes a masterpiece of a formula, but fails to explain it adequately. The customer navigating the site might be completely confused as to why the prices are fluctuating so much, or how to pay for things the best way. This is more of a failing on the user than the system - power users have to learn the lesson that complicated pricing will cause problems.
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply avoid slow loading stores. Additionally, slow loading stores can be pushed to the bottom of search results.
@@ -225,11 +226,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTAxOTY1MywxNTMxOTE1Mjc3LDEyNz
-A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
-MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
-U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
-NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
-wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
-MDU0OTMwMTFdfQ==
+eyJoaXN0b3J5IjpbLTE1NjAxODUwNjUsMTUzMTkxNTI3NywxMj
+cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
+MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
+k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
+MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
+gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
+NjA1NDkzMDExXX0=
 -->
