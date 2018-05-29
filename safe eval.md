@@ -32,7 +32,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 ### Let’s evaluate what this can’t do:
 
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers. Additionally, `(() => 5)()` doesn't work because we don't allow open and close parens next to each other.
-2.  Modify any variables! There’s no way to get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
+2.  Modify any variables! There’s no way to get an identifier with this set of characters. In other words, no variable name can be made.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
@@ -225,7 +225,7 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMjQ2OTAwNCwxNTMxOTE1Mjc3LDEyNz
+eyJoaXN0b3J5IjpbLTI3ODI5MDMzMCwxNTMxOTE1Mjc3LDEyNz
 A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
 MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
 U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
