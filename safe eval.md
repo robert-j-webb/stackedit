@@ -217,12 +217,13 @@ As long as maintainers don't permit forbidden characters, no XSS *should* be pos
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
 Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend setting up eslint and having a policy of not merging PRs that fail eslint.
+
 ### Summary
 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1MTcwODE4LDE0MzQ5NjE5MDksMTkwMz
+eyJoaXN0b3J5IjpbMTI3MDg0MDYyNCw1NTUxNzA4MTgsMTkwMz
 gyODM2MSwtNjAwOTI2OTIwLC04Njg2NjYzODcsMzc3MTczOTI3
 LC00MTEzNjcxMTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNj
 AyNTMzNjcsLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQw
