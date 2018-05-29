@@ -198,7 +198,7 @@ This is very quickly becoming a huge pain for me to write. I have to write a com
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
-The fact is, using `eval` instead of writing a lexer/calculator is a much better option for software engineering concerns, performance concerns and s. Implementing a lexer/calculator is about as difficult as implementing a reduced set of JS in JS.
+The fact is, using `eval` instead of writing a lexer/calculator is a much better option for both software engineering concerns, and performance. Implementing a lexer/calculator is about as difficult and slow as implementing a reduced set of JS in JS.
 
 ### On Code quality
 
@@ -223,9 +223,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDI1MzM2Nyw0MTA0NDA2NzQsLTE3OD
-QxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3
-MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNzUyOD
-ksMTYwNTQ5MzAxMSwtMjEwNjAxOTk0NCwxMzEyNjQyMjEwLDE0
-OTg2NTIzMzksLTg5OTMxMDQ1MiwtMTA5ODgzMzIwN119
+eyJoaXN0b3J5IjpbLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMT
+c4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMy
+MjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NT
+I4OSwxNjA1NDkzMDExLC0yMTA2MDE5OTQ0LDEzMTI2NDIyMTAs
+MTQ5ODY1MjMzOSwtODk5MzEwNDUyLC0xMDk4ODMzMjA3XX0=
 -->
