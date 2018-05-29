@@ -53,7 +53,7 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 | Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
 |Formula (\<textarea>)|*e ^(i * pi) + 1 === 0*|
 
-They select price and numberPreviousItemsPurchased as their variables.
+They select `price` and `numberPreviousItemsPurchased` as their variables.
 They fill in the Formula field like so:
 ```js
 price  -
@@ -75,7 +75,7 @@ Then, after the store updates, a returning user visits the site. Ed, who has bou
 
 ### How is this calculated?
 
-When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables using data from the `dataStore` and calculates the resulting price.
+When the store renders prices for each item, it checks to see if there is a discount, then it gets the formula, interpolates the variables using data from the `dataStore` and calculates the resulting price using Safe Eval.
 
 Interpolation looks like this:
 
@@ -99,7 +99,7 @@ function safeEval(expression){
 	try {
 		return eval(toEval);
 	} catch(error) {
-		return null;
+		return 0;
 		//Rather than try to recover, just return.
 	}
 }
@@ -225,11 +225,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQ4MTY1NDMsMTUzMTkxNTI3NywxMj
-cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
-MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
-k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
-MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
-gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
-NjA1NDkzMDExXX0=
+eyJoaXN0b3J5IjpbMTIwMTAxOTY1MywxNTMxOTE1Mjc3LDEyNz
+A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
+MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
+U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
+NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
+wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
+MDU0OTMwMTFdfQ==
 -->
