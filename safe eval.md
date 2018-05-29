@@ -217,16 +217,16 @@ As long as maintainers don't permit forbidden characters, no XSS *should* be pos
 
 Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you want an automated way of doing this, I recommend setting up eslint with the `no-eval` rule and having a policy of not merging PRs that fail eslint.
 
-### The only good abstraction is a programming language
+### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe.
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMTkxNTI3NywxMjcwODQwNjI0LDU1NT
-E3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4
-NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1NDg5OTksLTE2Nz
-MyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMy
-NTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OS
-wtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0y
-MTA2MDE5OTQ0XX0=
+eyJoaXN0b3J5IjpbLTI5MzkzNjE5NywxNTMxOTE1Mjc3LDEyNz
+A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
+MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
+U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
+NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
+wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
+MDU0OTMwMTFdfQ==
 -->
