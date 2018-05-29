@@ -225,14 +225,14 @@ Eval is one of the most notorious functions in the JS standard library, however,
 
 > I still don't think eval is a good idea! I can totally pop this regex and get an XSS on you!
 
-I'm open to all feedback. Tweet at me @realRobWebb or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
+I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwMDY4NDcxLC0xNzEyNTAyODc2LDE1Mz
-E5MTUyNzcsMTI3MDg0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2
-MSwtNjAwOTI2OTIwLC04Njg2NjYzODcsMzc3MTczOTI3LC00MT
-EzNjcxMTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMz
-NjcsLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC
-0xMTAzMjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEy
-NDEwNzUyODldfQ==
+eyJoaXN0b3J5IjpbLTExODYxOTM3MDksLTE3MTI1MDI4NzYsMT
+UzMTkxNTI3NywxMjcwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4
+MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLT
+QxMTM2NzExNiw5Mzk1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1
+MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNz
+ksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywt
+MTI0MTA3NTI4OV19
 -->
