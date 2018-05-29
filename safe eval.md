@@ -209,24 +209,24 @@ Eval is unsafe, but so is writing to the DOM without unescaping. We know that it
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
->"But even if you did have an open source project that was trusted, people would still break it accidentally.
+>"But even if you did have an open source project that was trusted, people would still break it accidentally."
 
 As long as maintainers don't permit forbidden characters, no XSS *should* be possible. Over time, maintainers may want to permit features like `Math.*` and similar functions, but they would only get to do so very carefully! Changes that allow more character sets would need meticulous security audits before they could get merged into new releases.
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
-Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. In fact, I 100% recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend setting up eslint and having a policy of not merging PRs that fail eslint.
+Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you're incapable of enforcing this rule on your team, I recommend setting up eslint w and having a policy of not merging PRs that fail eslint.
 
 ### The only good abstraction is a programming language
 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MDAwMjg2NywxMjcwODQwNjI0LDU1NT
-E3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4
-NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1NDg5OTksLTE2Nz
-MyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMy
-NTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OS
-wtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0y
-MTA2MDE5OTQ0XX0=
+eyJoaXN0b3J5IjpbLTE4NTYzOTA2MjksMTI3MDg0MDYyNCw1NT
+UxNzA4MTgsMTkwMzgyODM2MSwtNjAwOTI2OTIwLC04Njg2NjYz
+ODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NTQ4OTk5LC0xNj
+czMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0NzksLTMzMDgz
+MjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3MDQ4LDEzMTE4MTk0ND
+ksLTE3NTY0NDc4MDcsLTEyNDEwNzUyODksMTYwNTQ5MzAxMSwt
+MjEwNjAxOTk0NF19
 -->
