@@ -219,14 +219,14 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slower lexer and calculator. Additionally, 
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by putting Safe Eval in a library, you avoid having to put eval in your code. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTA2MTQsMTUzMTkxNTI3NywxMjcwOD
-QwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAs
-LTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1ND
-g5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3
-OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMT
-MxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1
-NDkzMDExXX0=
+eyJoaXN0b3J5IjpbLTgyOTM2MDQ2NywxNTMxOTE1Mjc3LDEyNz
+A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
+MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
+U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
+NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
+wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
+MDU0OTMwMTFdfQ==
 -->
