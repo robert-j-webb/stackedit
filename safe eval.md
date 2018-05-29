@@ -221,17 +221,18 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval frin a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
-> I still don't think eval is a good idea!
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval from a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
 
-I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
+> I still don't think eval is a good idea! I can totally pop this regex and get an XSS on you!
+
+I'm open to all feedback. Tweet at me @realRobWebb or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTI1MDI4NzYsMTUzMTkxNTI3NywxMj
-cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
-MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
-k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
-MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
-gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
-NjA1NDkzMDExXX0=
+eyJoaXN0b3J5IjpbODEwMDY4NDcxLC0xNzEyNTAyODc2LDE1Mz
+E5MTUyNzcsMTI3MDg0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2
+MSwtNjAwOTI2OTIwLC04Njg2NjYzODcsMzc3MTczOTI3LC00MT
+EzNjcxMTYsOTM5NTQ4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMz
+NjcsLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC
+0xMTAzMjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEy
+NDEwNzUyODldfQ==
 -->
