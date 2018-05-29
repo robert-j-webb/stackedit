@@ -36,12 +36,12 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
-So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, purely mathematical instruction set.
+So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, pure, mathematical instruction set.
 
 You might be thinking at this point:
 >Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?
 
-Arithmetic eval is actually the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
+Arithmetic eval is the second step of the function I’m proposing. The first step is providing inputs into the formula via interpolation.
 
 >What! Why would you ever need to do that! There's no valid use case for this!
 
@@ -51,7 +51,7 @@ User Marsha is customizing their shop for their hard earned neopets loot. They w
 || Create a Discount |
 |--|--|
 | Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
-|Formula (\<text>)|*e ^(i * pi) + 1 === 0*|
+|Formula (\<textarea>)|*e ^(i * pi) + 1 === 0*|
 
 They select price and numberPreviousItemsPurchased as their variables.
 They fill in the Formula field like so:
@@ -225,11 +225,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3ODI5MDMzMCwxNTMxOTE1Mjc3LDEyNz
-A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
-MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
-U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
-NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
-wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
-MDU0OTMwMTFdfQ==
+eyJoaXN0b3J5IjpbLTExNzQ4MTY1NDMsMTUzMTkxNTI3NywxMj
+cwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5
+MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mz
+k1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0
+MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLTExMDMyMjcwND
+gsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwx
+NjA1NDkzMDExXX0=
 -->
