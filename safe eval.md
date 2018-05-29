@@ -21,9 +21,9 @@ Eval is the universally shunned function of the JS standard library. Folk progra
 
 By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any algorithm without iteration or recursion in it. 
 
-### ```[0-9 . (.+) +-/*]``` Arithmetic
+### ```[0-9 . ([^\s]+) +-/*]``` Arithmetic
 
-0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `.+` means there needs to be at least one character in-between the parenthesis to avoid function calls.
+0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `[^\s]+` means there needs to be at least one non-whitespace character in-between the parenthesis to avoid function calls.
 
 ### ```[><=!&|]``` Boolean Expressions
 
@@ -31,7 +31,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 
 ### Let’s evaluate what this can’t do:
 
-1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers. Ad
+1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers. Additionally, `(() => 5)()` doesn't work because we don't allow open and close parens next to each other.
 2.  Modify any variables! There’s no way to get a reference to a variable with this set of characters. No variable name can be made up with this set of characters.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
 4.  Make a string, object, or array. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
@@ -225,11 +225,11 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'd love to hear why you think that! Tweet at me @realRobWebb or you can open an issue on this essay [here.](https://github.com/robert-j-webb/stackedit)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUyOTMyNzQ4LDE1MzE5MTUyNzcsMTI3MD
-g0MDYyNCw1NTUxNzA4MTgsMTkwMzgyODM2MSwtNjAwOTI2OTIw
-LC04Njg2NjYzODcsMzc3MTczOTI3LC00MTEzNjcxMTYsOTM5NT
-Q4OTk5LC0xNjczMjM3MjE4LC0yNjAyNTMzNjcsLTE3ODQxNDE0
-NzksLTMzMDgzMjU5NiwxNDkyMTQwMzc5LC0xMTAzMjI3MDQ4LD
-EzMTE4MTk0NDksLTE3NTY0NDc4MDcsLTEyNDEwNzUyODksMTYw
-NTQ5MzAxMV19
+eyJoaXN0b3J5IjpbMTgwMjQ2OTAwNCwxNTMxOTE1Mjc3LDEyNz
+A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
+MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
+U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
+NDc5LC0zMzA4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OC
+wxMzExODE5NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2
+MDU0OTMwMTFdfQ==
 -->
