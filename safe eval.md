@@ -206,7 +206,7 @@ The fact is, using `eval` instead of writing a lexer/calculator is a much better
 
 Your junior (and senior) developers are writing XSS bugs right now, without using eval at all.
 
-Eval is unsafe, but so is allowing any unesca It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you render it. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
+Eval is unsafe, but so is allowing any unescaped  It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you render it. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
 
 If we can find a way to write a sanitizer for Markdown, then we can find a way to write a sanitizer for Safe Eval. It's true that it needs tests, it will need to be battle hardened and it will need to be an open source project that people can trust.
 
@@ -223,11 +223,11 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMzkzMTg0NCwzNzcxNzM5MjcsLTQxMT
-M2NzExNiw5Mzk1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1MzM2
-NywtMTc4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNzksLT
-ExMDMyMjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywtMTI0
-MTA3NTI4OSwxNjA1NDkzMDExLC0yMTA2MDE5OTQ0LDEzMTI2ND
-IyMTAsMTQ5ODY1MjMzOSwtODk5MzEwNDUyLC0xMDk4ODMzMjA3
-XX0=
+eyJoaXN0b3J5IjpbLTg2ODY2NjM4NywtNTMzOTMxODQ0LDM3Nz
+E3MzkyNywtNDExMzY3MTE2LDkzOTU0ODk5OSwtMTY3MzIzNzIx
+OCwtMjYwMjUzMzY3LC0xNzg0MTQxNDc5LC0zMzA4MzI1OTYsMT
+Q5MjE0MDM3OSwtMTEwMzIyNzA0OCwxMzExODE5NDQ5LC0xNzU2
+NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2MDU0OTMwMTEsLTIxMDYwMT
+k5NDQsMTMxMjY0MjIxMCwxNDk4NjUyMzM5LC04OTkzMTA0NTIs
+LTEwOTg4MzMyMDddfQ==
 -->
