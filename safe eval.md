@@ -194,11 +194,11 @@ calculate(parsedFormula, [], { price: 5 }); // 10
 
 ### This is really complicated!
 
-This is very quickly becoming a huge pain for me to write. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. Testing, which will be a necessity, is going to require a lot of work to make sure that it is thorough.
+This is very quickly becoming a huge pain for me to write. I have to write a compiler, and a lexer. I have to continue extending this for each new kind of operator added. Just by looking at the value returned from the backend, it’s hard for me to parse what the formula is supposed to be. Testing, which will be a necessity, is going to require a lot of work to make sure that it covers all edge cases.
 
 Most importantly, it’s blatant duplication of code that already exists on the client. I’m essentially rewriting the browsers implementation of parsing JS and evaluating it. Their implementation is going to be 1000 more resilient, more performant, and more stable than anything I could write.
 
-The fact is, using `eval` instead of writing a lexer/calculator is a much better option for multiple reasons. Implementing a lexer/calculator is about as difficult as implementing a reduced set of JS in JS.
+The fact is, using `eval` instead of writing a lexer/calculator is a much better option for software engineering concerns, performance concerns and . Implementing a lexer/calculator is about as difficult as implementing a reduced set of JS in JS.
 
 ### On Code quality
 
@@ -223,9 +223,9 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQxNDE0NzksLTMzMDgzMjU5NiwxND
-kyMTQwMzc5LC0xMTAzMjI3MDQ4LDEzMTE4MTk0NDksLTE3NTY0
-NDc4MDcsLTEyNDEwNzUyODksMTYwNTQ5MzAxMSwtMjEwNjAxOT
-k0NCwxMzEyNjQyMjEwLDE0OTg2NTIzMzksLTg5OTMxMDQ1Miwt
-MTA5ODgzMzIwN119
+eyJoaXN0b3J5IjpbNDEwNDQwNjc0LC0xNzg0MTQxNDc5LC0zMz
+A4MzI1OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OCwxMzExODE5
+NDQ5LC0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2MDU0OTMwMT
+EsLTIxMDYwMTk5NDQsMTMxMjY0MjIxMCwxNDk4NjUyMzM5LC04
+OTkzMTA0NTIsLTEwOTg4MzMyMDddfQ==
 -->
