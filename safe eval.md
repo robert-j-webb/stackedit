@@ -219,10 +219,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 
 ### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least 
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzkzNjE5NywxNTMxOTE1Mjc3LDEyNz
+eyJoaXN0b3J5IjpbMTcwMzc2ODI4OSwxNTMxOTE1Mjc3LDEyNz
 A4NDA2MjQsNTU1MTcwODE4LDE5MDM4MjgzNjEsLTYwMDkyNjky
 MCwtODY4NjY2Mzg3LDM3NzE3MzkyNywtNDExMzY3MTE2LDkzOT
 U0ODk5OSwtMTY3MzIzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQx
