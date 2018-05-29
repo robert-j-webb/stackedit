@@ -200,10 +200,11 @@ Most importantly, it’s blatant duplication of code that already exists on the 
 
 The fact is, using `eval` instead of writing a lexer/calculator is a much better option for both software engineering concerns, and performance. Implementing a lexer/calculator is about as difficult and slow as implementing a reduced set of JS in JS.
 
-### Counter arguments against Code quality
+### Counter arguments against code quality
 
 >"Well eval can never be safe! Even if you only allow arithmetic in your eval, some junior developer will come by and make a change and break your implementation, causing XSS bugs galore!"
 
+Safe Eval needs to be in a library. It should not be easily modifiable or extensibl
 Your junior (and senior) developers are writing XSS bugs right now, without the help of eval.
 
 Here’s the thing that bothers me the most about calling ‘eval’ unsafe is that every time a developer lets unescaped html go into the DOM, they’re basically calling eval on that code. It’s true that it’s dangerous to write to the DOM unescaped, but very frequently we do that - for example allowing a user to have a link in their bio, or when a user uploads an image to a server and you render it. Markdown, which this blog post is written in, is compiled to HTML, sanitized, and then injected into the DOM.
@@ -223,10 +224,10 @@ Since Safe Eval lives in a library, you can still have style rules that prevent 
 Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is somewhat limitless and is now completely safe.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA2NzU5NDIwLC00NDQxNTQxNDgsLTE2Nz
-MyMzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMy
-NTk2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OS
-wtMTc1NjQ0NzgwNywtMTI0MTA3NTI4OSwxNjA1NDkzMDExLC0y
-MTA2MDE5OTQ0LDEzMTI2NDIyMTAsMTQ5ODY1MjMzOSwtODk5Mz
-EwNDUyLC0xMDk4ODMzMjA3XX0=
+eyJoaXN0b3J5IjpbOTM5NTQ4OTk5LDMwNjc1OTQyMCwtMTY3Mz
+IzNzIxOCwtMjYwMjUzMzY3LC0xNzg0MTQxNDc5LC0zMzA4MzI1
+OTYsMTQ5MjE0MDM3OSwtMTEwMzIyNzA0OCwxMzExODE5NDQ5LC
+0xNzU2NDQ3ODA3LC0xMjQxMDc1Mjg5LDE2MDU0OTMwMTEsLTIx
+MDYwMTk5NDQsMTMxMjY0MjIxMCwxNDk4NjUyMzM5LC04OTkzMT
+A0NTIsLTEwOTg4MzMyMDddfQ==
 -->
