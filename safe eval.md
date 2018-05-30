@@ -44,7 +44,7 @@ You might be thinking at this point:
 
 Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
->"Why would you ever want that? The use case for that must be contrived."
+>"Why would you ever want that! Ths use case for that must be contrived."
 
 ### A valid use case for Interpolation into Safe Eval:
 
@@ -122,7 +122,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply avoid slow loading stores. Additionally, slow loading stores can be pushed to the bottom of search results.
 
 At this point, you may be thinking,
->“Well you don’t need eval to do that. Rather than relying on an unsafe function, you could make a calculator that only permits math."
+>“Well you don’t need eval to do that. Rather than relying on an safme function, you could make a calculator that only permitsn"
 
 ### Ok, let’s build a calculator.
 
@@ -217,22 +217,22 @@ As long as maintainers don't permit forbidden characters, no XSS *should* be pos
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
-Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you want an automated way of doing this, I recommend setting up eslint with the `no-eval` rule and having a policy of not merging PRs that fail eslint.
+Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you want an automated way of doing thism, I recommend setting up eslint with the `no-eval` rule and having a policy of not merging PRs that fail eslint.
 
 ### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to strange edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible and completely safe. I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval from a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to  edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible  I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval from a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
 
 > I still don't think eval is a good idea! I can totally pop this regex and get an XSS on you!
 
-I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
+I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)s now safe to run. The alternatives are slow, and result in a great deal of engineering effort. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODYxOTM3MDksLTE3MTI1MDI4NzYsMT
-UzMTkxNTI3NywxMjcwODQwNjI0LDU1NTE3MDgxOCwxOTAzODI4
-MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4NywzNzcxNzM5MjcsLT
-QxMTM2NzExNiw5Mzk1NDg5OTksLTE2NzMyMzcyMTgsLTI2MDI1
-MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMyNTk2LDE0OTIxNDAzNz
-ksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OSwtMTc1NjQ0NzgwNywt
-MTI0MTA3NTI4OV19
+eyJoaXN0b3J5IjpbLTEwOTI3NDA4MjcsLTExODYxOTM3MDksLT
+E3MTI1MDI4NzYsMTUzMTkxNTI3NywxMjcwODQwNjI0LDU1NTE3
+MDgxOCwxOTAzODI4MzYxLC02MDA5MjY5MjAsLTg2ODY2NjM4Ny
+wzNzcxNzM5MjcsLTQxMTM2NzExNiw5Mzk1NDg5OTksLTE2NzMy
+MzcyMTgsLTI2MDI1MzM2NywtMTc4NDE0MTQ3OSwtMzMwODMyNT
+k2LDE0OTIxNDAzNzksLTExMDMyMjcwNDgsMTMxMTgxOTQ0OSwt
+MTc1NjQ0NzgwN119
 -->
