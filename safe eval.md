@@ -23,7 +23,7 @@ By using expressions like  `8 + 5 > 3 ? 5 : 3`, you can replicate almost any alg
 
 ### ```[0-9 . ([^\s]+) +-/*]``` Arithmetic
 
-0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `[^\s]+` means there needs to be at least one non-whitespace character in-between the parenthesis to avoid function calls.
+0-9 and arithmetic operators allow us to create constants and apply arithmetic operations on them. The `[^\s]+` means there needs to be at least one non-whitespace character in-between the parentheses to avoid function calls.
 
 ### ```[><=!&|]``` Boolean Expressions
 
@@ -42,15 +42,16 @@ You might be thinking at this point:
 
 >"Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?"
 
-Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
+You're correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
->"Why would you ever want that! Ths use case for that must be contrived."
+>"Why would you ever want that! The use case for that must be contrived."
 
 ### A valid use case for Interpolation into Safe Eval:
 
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
-|| Create a Discount |
-|--|--|
+
+| Create a Discount | |
+|---|---|
 | Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
 |Formula (\<textarea>)|*e ^(i * pi) + 1 === 0*|
 
@@ -67,9 +68,9 @@ Which then gets saved to the backend like this:
 
 ```js
 {
-	formula: “price  - price  * (numberPreviousItemsPurchased  >  5) ? 0.05 :
-numberPreviousItemsPurchased  *  0.01”,
-	dependentKeys: [‘price’, ‘numberPreviousItemsPurchased’]
+	formula: "price  - price  * (numberPreviousItemsPurchased  >  5) ? 0.05 :
+numberPreviousItemsPurchased  *  0.01",
+	dependentKeys: ['price', 'numberPreviousItemsPurchased']
 }
 ```
 Then, after the store updates, a returning user visits the site. Ed, who has bought 3 golden pet eggs from the store previously, has a previousItemsPurchased value of 3. When Ed looks at prices, they see a discount on everything for 3%! 
@@ -94,7 +95,7 @@ interpolate("price * .99", ["price"], { price: "100" });
 Calculation looks like this:
 ```js
 function safeEval(expression){
-	const toEval = expression.replace(/(\(\s*\)|[^0-9.()+\-*\/><=!&|?:])+/g, ‘’);
+	const toEval = expression.replace(/(\(\s*\)|[^0-9.()+\-*\/><=!&|?:])+/g, '');
 	// ^ Removes unsafe chars (including ( ), but not (5 + 5))
 	// See https://regex101.com/r/Pt82Gi/3 for examples.
 	try {
@@ -217,11 +218,11 @@ As long as maintainers don't permit forbidden characters, no XSS *should* be pos
 
 >"Eval encourages developers to use eval everywhere, and that's going to cause problems!"
 
-Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you want an automated way of doing thism, I recommend setting up eslint with the `no-eval` rule and having a policy of not merging PRs that fail eslint.
+Since Safe Eval lives in a library, you can still have style rules that prevent accepting PRs with eval in them. I strongly recommend that you do not allow people to submit pull requests with eval. If you want an automated way of doing this, I recommend setting up eslint with the `no-eval` rule and having a policy of not merging PRs that fail eslint.
 
 ### Eval can be safe.
 
-Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to  edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible  I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval from a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
+Eval is one of the most notorious functions in the JS standard library, however, I don't think that means we should ban it to  edge cases related to importing code. Letting users input code into your website is an amazing feature that gives them all of the options that a programming language has, and it can be very dangerous for that reason. However, by removing all of the potentially dangerous bits of a programming language, we're still left with a feature that is very flexible.  I've demonstrated that there is at least one valid use case for Safe Eval and that it is a feature which gives the user the ability to be creative as well as less work for the developer. Although you can achieve the same feature set without using Eval, you have to do so with a very complicated, slow lexer and calculator. Additionally, by using Safe Eval from a library, you avoid having to put eval in your code and you avoid any potentially dangerous usages of eval.
 
 > I still don't think eval is a good idea! I can totally pop this regex and get an XSS on you!
 
