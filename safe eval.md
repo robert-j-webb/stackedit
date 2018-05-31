@@ -228,5 +228,6 @@ Eval is one of the most notorious functions in the JS standard library, however,
 I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)s now safe to run. The alternatives are slow, and result in a great deal of engineering effort. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NjA4Nzc4NywtMTA5Mjc0MDgyN119
+eyJoaXN0b3J5IjpbLTEwOTI3NDA4MjcsLTg4NjA4Nzc4NywtMT
+A5Mjc0MDgyN119
 -->
