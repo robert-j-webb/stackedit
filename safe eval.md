@@ -225,9 +225,8 @@ Eval is one of the most notorious functions in the JS standard library, however,
 
 > I still don't think eval is a good idea! I can totally pop this regex and get an XSS on you!
 
-I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)s now safe to run. The alternatives are slow, and result in a great deal of engineering effort. 
-
+I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTI3NDA4MjcsLTg4NjA4Nzc4NywtMT
-A5Mjc0MDgyN119
+eyJoaXN0b3J5IjpbMTg5NjMwMDIyNiwtMTA5Mjc0MDgyNywtOD
+g2MDg3Nzg3LC0xMDkyNzQwODI3XX0=
 -->
