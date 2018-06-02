@@ -85,8 +85,8 @@ Interpolation looks like this:
 function interpolate(formula, dependentKeys, dataStore){
 	return dependentKeys.reduce((acc, key) => {
 		let value = dataStore[key]; //Lookup the variable
-		return acc.replace(RegExp(key, 'g'), value);
-		//Replace all occurrences of the string with the value of the variable
+		return acc.replace(RegExp('\\b'+key+'\\b', 'g'), value);
+		//Replace all occurrences of the key with word boundaries (thanks @dhashe) with the value of the variable
 	}, formula);
 };
 interpolate("price * .99", ["price"], { price: "100" });
@@ -228,7 +228,7 @@ Eval is one of the most notorious functions in the JS standard library, however,
 
 I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2OTQ1NDU2MiwtMTMxMjc5MTU0OCwxOD
-k2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYwODc3ODcsLTEwOTI3
-NDA4MjddfQ==
+eyJoaXN0b3J5IjpbLTE1ODMwMDg5NjcsMTQ2OTQ1NDU2MiwtMT
+MxMjc5MTU0OCwxODk2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYw
+ODc3ODcsLTEwOTI3NDA4MjddfQ==
 -->
