@@ -123,7 +123,7 @@ I think this is an amazing solution as far as giving your users flexibility and 
 3.  If there are too many overly complicated discounts on the page, it might cause the computer to take a long time to render the discounts. This is something the store owner should be incentivized not to do if they want to make money, and customers can simply avoid slow loading stores. Additionally, slow loading stores can be pushed to the bottom of search results.
 
 At this point, you may be thinking,
->“Well you don’t need eval to do that. Rather than relying on an safe function, you could make a calculator that only permits the exact"
+>“Well you don’t need eval to do that. Rather than relying on an safe function, you could make a calculator that only permits the exact calculation"
 
 ### Ok, let’s build a calculator.
 
@@ -228,6 +228,7 @@ Eval is one of the most notorious functions in the JS standard library, however,
 
 I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA0MTkyNzk1LDE4OTYzMDAyMjYsLTEwOT
-I3NDA4MjcsLTg4NjA4Nzc4NywtMTA5Mjc0MDgyN119
+eyJoaXN0b3J5IjpbLTEzMTI3OTE1NDgsMzA0MTkyNzk1LDE4OT
+YzMDAyMjYsLTEwOTI3NDA4MjcsLTg4NjA4Nzc4NywtMTA5Mjc0
+MDgyN119
 -->
