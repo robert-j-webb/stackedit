@@ -49,6 +49,7 @@ Your correct. Arithmetic eval is the second step of the function I’m proposing
 ### A valid use case for Interpolation into Safe Eval:
 
 User Marsha is customizing their shop for their hard earned neopets loot. They want to encourage loyalty, so they want to have a discount if a customer is a repeat buyer. She selects "add a dynamic discount" from the shop edit screen and she is greeted with a form like this one:
+
 || Create a Discount |
 |--|--|
 | Variables (\<select>) |`price`, `numberPreviousItemsPurchased`, `affinityForCats`, `isActuallyARobot` |
@@ -227,6 +228,6 @@ Eval is one of the most notorious functions in the JS standard library, however,
 
 I'm open to all feedback. Tweet at me [@realRobWebb](https://twitter.com/Realrobwebb) or you can open an issue on this blog post [here.](https://github.com/robert-j-webb/stackedit)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NjMwMDIyNiwtMTA5Mjc0MDgyNywtOD
-g2MDg3Nzg3LC0xMDkyNzQwODI3XX0=
+eyJoaXN0b3J5IjpbLTE3MzcyNTE0MzYsMTg5NjMwMDIyNiwtMT
+A5Mjc0MDgyNywtODg2MDg3Nzg3LC0xMDkyNzQwODI3XX0=
 -->
