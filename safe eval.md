@@ -42,7 +42,7 @@ You might be thinking at this point:
 
 >"Well great, I guess it’s somewhat safe to run eval on a purely mathematical expression. But why would I want to do that? There is no input to the expression, so why not just serve up the result? Why calculate a formula on the client at all?"
 
-Your correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
+You're correct. Arithmetic eval is the second step of the function I’m proposing. The first step is providing variables into the formula via interpolation.
 
 >"Why would you ever want that! Ths use case for that must be contrived."
 
