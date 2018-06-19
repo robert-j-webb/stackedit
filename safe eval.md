@@ -1,3 +1,7 @@
+# 3 weeks after writing the essay...
+
+I realize that safe eval is a mistake. Please do not include it in your repositories and do not make a library that supports it. It's better to write a comp
+
 # A Case for Safe Eval
 >“Eval is only one letter away from evil.”
 
@@ -233,5 +237,5 @@ MxMjc5MTU0OCwxODk2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYw
 ODc3ODcsLTEwOTI3NDA4MjddfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NTc4ODkzNV19
+eyJoaXN0b3J5IjpbLTEwMDM0MTQwMV19
 -->
