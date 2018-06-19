@@ -4,7 +4,7 @@ No one has provided any input to safe eval that has an arbitrarily long executio
 
 I realize that safe eval is a mistake. Please do not include it in your repositories. It's better to write a compiler because JavaScript is a language that's impossible to prove as Safe. Safe Eval is really just, "Hasn't been proven Unsafe yet Eval."
 
-I'm not removing the essay because I think it's important to realize that even an argument that's somewhat solid isn't
+I'm not removing the essay because I think it still make some good points about including user input that's formulaic.
 
 # A Case for Safe Eval
 >“Eval is only one letter away from evil.”
@@ -241,6 +241,6 @@ MxMjc5MTU0OCwxODk2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYw
 ODc3ODcsLTEwOTI3NDA4MjddfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTkxNDU4NiwxMDI1Njc1OTE2LDc0Mj
+eyJoaXN0b3J5IjpbMTYzOTA3NjU3OSwtODQ5OTE0NTg2LDc0Mj
 A3NzExMV19
 -->
