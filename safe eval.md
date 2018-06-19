@@ -2,7 +2,7 @@
 
 No one has provided any input to safe eval that has an arbitrarily long execution time or RCE. However,
 
-I realize that safe eval is a mistake. Please do not include it in your repositories. It's better to write a compiler because JavaScript is a language that's impossible to prove as Safe. Safe Eval is really just, "Hasn't been proven Unsafe yet Eval."
+I realize that safe eval is a mistake. Please do not include it in your repositories. It's better to write a compiler because JavaScript is a language that's impossible to prove as safe. Safe Eval is really just, "Hasn't Been Proven Unsafe Yet Eval."
 
 I'm not removing the essay because I think it still make some good points about including user input that's formulaic.
 
@@ -42,7 +42,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers. Additionally, `(() => 5)()` doesn't work because we don't allow open and close parens next to each other.
 2.  Modify any variables! There’s no way to get an identifier with this set of characters. In other words, no variable name can be made.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
-4.  ~~Make a string, object, or array~~. **You can actually make a string by doing this `((/**/) => 5) + 5` however, it is still not possible to use th** Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
+4.  ~~Make a string, object, or array~~. **You can actually make a string by doing this `((/**/) => 5) + 5` however, it is still not known how to use this to make an infinite loop or RCE. Objects and Arrays are still impossible.** Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
 So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, pure, mathematical instruction set.
 
@@ -241,6 +241,6 @@ MxMjc5MTU0OCwxODk2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYw
 ODc3ODcsLTEwOTI3NDA4MjddfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMjE5OTcyMCwxNTM3MTMxNTYwLDc0Mj
+eyJoaXN0b3J5IjpbMTgzMDAzMTcyMywtNTIyMTk5NzIwLDc0Mj
 A3NzExMV19
 -->
