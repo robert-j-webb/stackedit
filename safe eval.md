@@ -42,7 +42,7 @@ By using `<=, <, >, >=, ===, ==!, &&, ||`, we can evaluate any boolean expressio
 1.  Call any function! It’s impossible to do so. Although you can construct a regex with this set of characters, you can’t access properties on the regex with just numbers. Additionally, `(() => 5)()` doesn't work because we don't allow open and close parens next to each other.
 2.  Modify any variables! There’s no way to get an identifier with this set of characters. In other words, no variable name can be made.
 3.  Loop infinitely! There’s no way to recurse, while, or any such thing. This formula is guaranteed to halt. It’s possible to make a formula that will take a very long time to evaluate, but that’s it! You could also set a maxlength on the formula, so as to make this very difficult. I would love to see what short character equations are possible with this set that take more than a few milliseconds to evaluate.
-4.  ~~Make a string, object, or array~~. Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
+4.  ~~Make a string, object, or array~~. **You can actually make a string by doing this `((/**/) => 5) + 5` however, it is still not possible ** Unfortunately, by allowing  quotes, square brackets, or curly brackets, you can most likely write any code that you want at this point. See [jsfuck](http://www.jsfuck.com/) for example. 
 
 So Safe Eval is safe! You can confidently run code from users by restricting their  JS to a small, pure, mathematical instruction set.
 
@@ -241,6 +241,6 @@ MxMjc5MTU0OCwxODk2MzAwMjI2LC0xMDkyNzQwODI3LC04ODYw
 ODc3ODcsLTEwOTI3NDA4MjddfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQxMzAzOTcxLDE2MzkwNzY1NzksNzQyMD
+eyJoaXN0b3J5IjpbMTUzNzEzMTU2MCw3NDEzMDM5NzEsNzQyMD
 c3MTExXX0=
 -->
